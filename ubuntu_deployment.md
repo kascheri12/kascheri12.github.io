@@ -1,4 +1,4 @@
-# Installing and Testing Golem 0.9.0 Ubuntu 16.04
+# Installing, Running, and Testing Golem 0.9.0 on Ubuntu 16.04
 
 ###### Notes
   * This tutorial will cover golem version 0.9.0
@@ -9,6 +9,7 @@
   * **[VirtualBox](#virtualbox-deployment)**
   * **[Golem Installation](#golem-installation)**
   * **[Golem Execution](#executing-golemapp--golemcli)**
+  * **[Testing Golem](#testing-golem)**
 
 ## Google Cloud Deployment
 
@@ -18,16 +19,16 @@
 1. Visit [Google Cloud](https://console.cloud.google.com)
   * Create new account or use existing one
   * Verify with phone number
-    * Hint: You can do this 5 times via text and 3/4 times via voice.
+    * Hint: You can do this 5 times via text and 3 or 4 times via voice.
 
 1. Sign up for the free $300 credit for using the service
-  * Do need to provide address and Credit Card info to Google, however interested you are in doing that.
+  * You do need to provide address and Credit Card info to Google, however interested you are in doing that.
   * I believe, and don't quote me on this - that they don't charge you until you "upgrade" your account.
 
 1. Once logged in and viewing the console, select Compute Engine from the left side panel.
   * `Create` a VM
   * Select a location
-    * Hint: Check out the location info to see CPU specs per datacenter
+    * Hint: Check out the location info to see CPU specs per location
   * Machine Type
     * Minimum requirements I've found to work excellent:
       * 1 vCPU, 7GB RAM, Ubuntu 16.04, 30GB SSD
@@ -37,12 +38,47 @@
   * For ease and simplicity, I just target all instances in the network, and IP ranges of `0.0.0.0/0` and Allow all.
   * Make sure to repeat for the other direction; if you did egress first, you also need an ingress rule.
   
+1. You're done settings up the environment for Google, navigate back to Compute Engine and 
+SSH into the machine and move to [Golem Installation](@golem-installation).
+
   
+## VitualBox Deployment
+
+1. Install [VirtualBox](https://virtualbox.org)
+
+1. Download latest version of [Ubuntu 16.04](http://releases.ubuntu.com/16.04/)
+
+1. VirtualBox Preferences
+  * File->Preferences->Network->Host-Only Networks
+    * Make sure there is at least one entry, if not add one.
+
+1. New VM
+  * Name: golem; Type: Linux; Version: Ubuntu (64-bit); 10GB RAM
+  
+1. Setting the Settings
+
+We want the right settings for CPU resources being allocated to this VM as well as ability to 
+SSH from putty or terminal (since VirtualBox's tty is atrocious)
+
+  * Set values for RAM and CPU's
+    * System->Motherboard->Base Memory(RAM)
+    * System->Processor
+  * Network
+    * Adapter 2
+      * Host-only Adapter
+      * VirtualBox Host-only Ethernet Adapter
+    * Adapter 1
+      * Advanced->Port Forwarding
+      * TCP Host Port 2222 -> Guest Port 22
+
+1. Start VM & Install Ubuntu 16.04
+  * Hint: Defaults are fine (Press enter about 8 times in a row)
+
   
 ## Golem Installation
 
 1. SSH into VM
-  * Issue commands to install golem and dependencies
+  * Issue commands below to install golem and dependencies
 
 ```
 
@@ -80,7 +116,7 @@ sudo shutdown -r now
 
 ## Executing Golemapp & Golemcli
 
-You're going to want at least 2-3 command line sessions going most likely.
+You're going to want at least 2-3 command line threads most likely.
   1. golemapp
   2. golemcli
   3. automated task creation (for testing)
@@ -116,7 +152,6 @@ cd ~/golem-0.9.0
 tmux ls  # View all tmux threads
 tmux a -t 0  # Attach to thread 0
 
-
-
 ```
   
+## Testing Golem
