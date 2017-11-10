@@ -81,7 +81,6 @@ SSH from putty or terminal (since VirtualBox's tty is atrocious)
   * Issue commands below to install golem and dependencies
 
 ```
-
 #### Download Golem RC, Decompress ####
 wget https://github.com/golemfactory/golem/releases/download/0.9.0/golem-linux_x64-0.9.0.tar.gz
 tar xvzf golem-linux_x64-0.9.0.tar.gz
@@ -111,7 +110,6 @@ sudo ln -s /usr/bin/python3 /usr/local/bin/python
 
 #### Restart ####
 sudo shutdown -r now
-
 ```
 
 ## Executing Golemapp & Golemcli
@@ -133,7 +131,6 @@ The most useful `tmux` commands I use all the time:
 Moving on.... now lets get started with running golem
 
 ```
-
 # Start new thread
 tmux
 # Start golemapp from this thread (always thread 0)
@@ -151,7 +148,44 @@ cd ~/golem-0.9.0
 # Ctrl b, d
 tmux ls  # View all tmux threads
 tmux a -t 0  # Attach to thread 0
-
 ```
   
 ## Testing Golem
+
+1. Install Dependencies
+  * Unzip
+
+```
+# Install Unzip
+sudo apt-get install unzip
+```
+  
+1. Download and unzip sample golem-header blender file
+
+```
+wget http://golem.timjones.id.au/golem-header.zip
+unzip golem-header.zip
+```
+
+1. Clone golem_util repo into Git subfolder
+
+```
+mkdir -p ~/Git
+cd ~/Git
+git clone https://github.com/kascheri12/golem_util.git
+
+## optional - install dependencies for automation
+sudo apt-get install -y python3-pip
+pip3 install --upgrade pip
+sudo pip3 install twisted
+```
+
+1. Tweak a few things in the sample task and create task files
+
+  * Specify the resources being used for the sample task. There are 3 lines, you only need one to do the sample golem-header blend file.
+  **Remove** two of the resources and put the **full path** to the `golem-header.blend`
+  file. It should be `/home/<username>/golem-header.blend`
+  
+  * The automation is driven by twisted's reactor. Once changes have been made, run `python3 create_task.py`.
+  Make sure there's no errors in the golemapp logs. The most common error I found was empty resources, 
+  meaning I didn't put the full path of the resources I was using.
