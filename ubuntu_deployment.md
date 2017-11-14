@@ -21,25 +21,26 @@
   * Verify with phone number
     * Hint: You can do this 5 times via text and 3 or 4 times via voice.
 
-1. Sign up for the free $300 credit for using the service
-  * You do need to provide address and Credit Card info to Google, however interested you are in doing that.
-  * I believe, and don't quote me on this - that they don't charge you until you "upgrade" your account.
+1. Sign up for the **free $300 credit** for using the service
+  * Need to provide address and Credit Card info
+  * I believe, and don't quote me on this - you won't be charged until you "upgrade" your account.
 
-1. Once logged in and viewing the console, select Compute Engine from the left side panel.
+1. From [Google Cloud Console](http://console.cloud.google.com) select **[Compute Engine](https://console.cloud.google.com/compute/)** from the left side panel.
   * `Create` a VM
-  * Select a location
+  * Select a [Zone](https://cloud.google.com/compute/docs/regions-zones/)
     * Hint: Check out the location info to see CPU specs per location
-  * Machine Type
+  * Select a Machine Type
     * Minimum requirements I've found to work excellent:
       * 1 vCPU, 7GB RAM, Ubuntu 16.04, 30GB SSD
       
-1. While waiting for that to be created, go to VPC Network -> Firewall Rules
-  * Create two firewall rules, egress and ingress
-  * For ease and simplicity, I just target all instances in the network, and IP ranges of `0.0.0.0/0` and Allow all.
+1. While waiting for that to be created, go to [VPC Network](https://console.cloud.google.com/networking/) -> [Firewall Rules](https://console.cloud.google.com/networking/firewalls/)
+  * `Create` two firewall rules, __*egress*__ and __*ingress*__
+  * For ease and simplicity, I just _**target all instances in the network**_, and IP ranges of `0.0.0.0/0` and **_Allow all_**.
   * Make sure to repeat for the other direction; if you did egress first, you also need an ingress rule.
   
-1. You're done settings up the environment for Google, navigate back to Compute Engine and 
-SSH into the machine and move to [Golem Installation](@golem-installation).
+1. You're done settings up the environment for Google, navigate back to 
+[Compute Engine](https://console.cloud.google.com/compute/) and SSH 
+into the machine and move to [Golem Installation](@golem-installation).
 
   
 ## VitualBox Deployment
@@ -160,14 +161,14 @@ tmux a -t 0  # Attach to thread 0
 sudo apt-get install unzip
 ```
   
-1. Download and unzip sample golem-header blender file
+1. *Download* and *unzip* sample golem-header blender file
 
 ```
 wget http://golem.timjones.id.au/golem-header.zip
 unzip golem-header.zip
 ```
 
-1. Clone golem_util repo into Git subfolder
+1. *Clone* golem_util repo into Git subfolder
 
 ```
 mkdir -p ~/Git
