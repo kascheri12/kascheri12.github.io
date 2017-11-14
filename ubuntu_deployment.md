@@ -36,7 +36,7 @@
   
 1. You're done settings up the environment for Google, navigate back to 
 [Compute Engine](https://console.cloud.google.com/compute/) and SSH 
-into the machine and move to [Golem Installation](@golem-installation).
+into the machine and move to [Golem Installation](#golem-installation).
 
   
 ### VitualBox Deployment
