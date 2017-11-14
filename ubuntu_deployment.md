@@ -1,17 +1,13 @@
 # Installing, Running, and Testing Golem 0.9.0 on Ubuntu 16.04
 
-###### Notes
-  * This tutorial will cover golem version 0.9.0
-  * Ubuntu 16.04
-
-#### Table of Contents
+## Contents
   * **[Google Cloud](#google-cloud-deployment)**
   * **[VirtualBox](#virtualbox-deployment)**
   * **[Golem Installation](#golem-installation)**
   * **[Golem Execution](#executing-golemapp--golemcli)**
   * **[Testing Golem](#testing-golem)**
 
-## Google Cloud Deployment
+### Google Cloud Deployment
 
 **Google is offering $300 to anyone with a Credit Card and phone number for verification.**
 **I claimed a few free offers and got hooked. Be warned, those GPU's drain the bank quickly.**
@@ -43,7 +39,7 @@
 into the machine and move to [Golem Installation](@golem-installation).
 
   
-## VitualBox Deployment
+### VitualBox Deployment
 
 1. Install [VirtualBox](https://virtualbox.org)
 
@@ -76,7 +72,7 @@ SSH from putty or terminal (since VirtualBox's tty is atrocious)
   * Hint: Defaults are fine (Press enter about 8 times in a row)
 
   
-## Golem Installation
+### Golem Installation
 
 1. SSH into VM
   * Issue commands below to install golem and dependencies
@@ -113,7 +109,7 @@ sudo ln -s /usr/bin/python3 /usr/local/bin/python
 sudo shutdown -r now
 ```
 
-## Executing Golemapp & Golemcli
+### Executing Golemapp & Golemcli
 
 You're going to want at least 2-3 command line threads most likely.
   1. golemapp
@@ -151,7 +147,7 @@ tmux ls  # View all tmux threads
 tmux a -t 0  # Attach to thread 0
 ```
   
-## Testing Golem
+### Testing Golem
 
 1. Install Dependencies
   * Unzip
