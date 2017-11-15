@@ -12,7 +12,7 @@
 **Google is offering $300 to anyone with a Credit Card and phone number for verification.**
 **I claimed a few free offers and got hooked. Be warned, those GPU's drain the bank quickly.**
 
-1. Visit [Google Cloud](https://console.cloud.google.com)
+1. Visit <a href="https://console.cloud.google.com" target="\_blank">Google Cloud</a>
   * Create new account or use existing one
   * Verify with phone number
     * Hint: You can do this 5 times via text and 3 or 4 times via voice.
@@ -21,29 +21,29 @@
   * Need to provide address and Credit Card info
   * I believe, and don't quote me on this - you won't be charged until you "upgrade" your account.
 
-1. From [Google Cloud Console](http://console.cloud.google.com) select **[Compute Engine](https://console.cloud.google.com/compute/)** from the left side panel.
+1. From <a href="http://console.cloud.google.com" target="\_blank">Google Cloud Console</a> select **<a href="https://console.cloud.google.com/compute/" target="\_blank">Compute Engine</a>** from the left side panel.
   * `Create` a VM
-  * Select a [Zone](https://cloud.google.com/compute/docs/regions-zones/)
+  * Select a <a href="https://cloud.google.com/compute/docs/regions-zones/" target="\_blank">Zone</a>
     * Hint: Check out the location info to see CPU specs per location
   * Select a Machine Type
     * Minimum requirements I've found to work excellent:
       * 1 vCPU, 6.5GB RAM, Ubuntu 16.04, 30GB SSD
       
-1. While waiting for that to be created, go to [VPC Network](https://console.cloud.google.com/networking/) -> [Firewall Rules](https://console.cloud.google.com/networking/firewalls/)
+1. While waiting for that to be created, go to <a href="https://console.cloud.google.com/networking/" target="\_blank">VPC Network</a> -> <a href="https://console.cloud.google.com/networking/firewalls/" target="\_blank">Firewall Rules</a>
   * `Create` two firewall rules, __*egress*__ and __*ingress*__
   * For ease and simplicity, I just _**target all instances in the network**_, and IP ranges of `0.0.0.0/0` and **_Allow all_**.
   * Make sure to repeat for the other direction; if you did egress first, you also need an ingress rule.
   
 1. You're done settings up the environment for Google, navigate back to 
-[Compute Engine](https://console.cloud.google.com/compute/) and SSH 
+<a href="https://console.cloud.google.com/compute/" traget="\_blank">Compute Engine</a> and SSH 
 into the machine and move to [Golem Installation](#golem-installation).
 
   
 ### VitualBox Deployment
 
-1. Install [VirtualBox](https://virtualbox.org)
+1. Install <a href="https://virtualbox.org" target="\_blank">VirtualBox</a>
 
-1. Download latest version of [Ubuntu 16.04](http://releases.ubuntu.com/16.04/)
+1. Download latest version of <a href="http://releases.ubuntu.com/16.04/" target="\_blank">Ubuntu 16.04</a>
 
 1. VirtualBox Preferences
   * File->Preferences->Network->Host-Only Networks
@@ -147,9 +147,9 @@ tmux
 ```
 
 From `golemcli` you can inspect settings, tasks, subtasks, etc. Play around with commands to get the feel of things. 
-A list of commands can be found at [Golem Command Line](https://github.com/golemfactory/golem/wiki/Command-Line).
+A list of commands can be found at <a href="https://github.com/golemfactory/golem/wiki/Command-Line" target="\_blank">Golem Command Line</a>.
 
-The first thing I like to do from `golemcli` is name my node so I know which one is mine at [Golem Stats Page](https://stats.golem.network).
+The first thing I like to do from `golemcli` is name my node so I know which one is mine at <a href="https://stats.golem.network" target="\_blank">Golem Stats Page</a>.
 
 ```
 settings set node_name kascheri12/1
@@ -164,7 +164,7 @@ tmux ls  # View all tmux threads
 tmux a -t 0  # Attach to thread 0
 ```
 
-At this point, if there have been no errors your node should appear on [Golem Stats Page](https://stats.golem.network). If not, something has gone wrong and additional troubleshooting is needed. Visit [Golem Chat](https://chat.golem.network) for assistance.
+At this point, if there have been no errors your node should appear on <a href="https://stats.golem.network" target="\_blank">Golem Stats Page</a>. If not, something has gone wrong and additional troubleshooting is needed. Visit <a href="https://chat.golem.network" target="\_blank">Golem Chat</a> for assistance.
 
 ### Testing Golem
 
@@ -212,4 +212,4 @@ sudo pip3 install twisted
     python3 ~/Git/golem_util/create_task.py
     ```
 
-This last part [Testing Golem](#testing-golem) is definitely the most tricky part and will require minor changes to get it to work. If you have questions, I can be found in [Golem Chat](https://chat.golem.network) `@kenny.ascheri`
+This last part [Testing Golem](#testing-golem) is definitely the most tricky part and will require minor changes to get it to work. If you have questions, I can be found in <a href="https://chat.golem.network" target="_blank">Golem Chat</a> `@kenny.ascheri`
