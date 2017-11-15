@@ -27,7 +27,7 @@
     * Hint: Check out the location info to see CPU specs per location
   * Select a Machine Type
     * Minimum requirements I've found to work excellent:
-      * 1 vCPU, 7GB RAM, Ubuntu 16.04, 30GB SSD
+      * 1 vCPU, 6.5GB RAM, Ubuntu 16.04, 30GB SSD
       
 1. While waiting for that to be created, go to [VPC Network](https://console.cloud.google.com/networking/) -> [Firewall Rules](https://console.cloud.google.com/networking/firewalls/)
   * `Create` two firewall rules, __*egress*__ and __*ingress*__
@@ -107,6 +107,7 @@ sudo ln -s /usr/bin/python3 /usr/local/bin/python
 
 #### Restart ####
 sudo shutdown -r now
+
 ```
 
 ### Executing Golemapp & Golemcli
@@ -131,22 +132,40 @@ Moving on.... now lets get started with running golem
 # Start new thread
 tmux
 # Start golemapp from this thread (always thread 0)
-cd ~/golem-0.9.0
-./golemapp
+~/golem-0.9.0/golemapp
+```
 
+Wait until you see logs for `Docker: pulling image golemfactory/base`, `Docker: pulling image golemfactory/blender`, & `Docker: pulling image golemfactory/luxrender`.
+Once you see these logs (and no errors have occurred) move on to the next step.
+
+```
 # Exit the tmux thread and start another
 # Ctrl + b, d
 tmux
 # Start the golemcli to see diagnostics
-cd ~/golem-0.9.0
-./golemcli -i
+~/golem-0.9.0/golemcli -i
+```
 
+From `golemcli` you can inspect settings, tasks, subtasks, etc. Play around with commands to get the feel of things. 
+A list of commands can be found at [Golem Command Line](https://github.com/golemfactory/golem/wiki/Command-Line).
+
+The first thing I like to do from `golemcli` is name my node so I know which one is mine at [Golem Stats Page](https://stats.golem.network).
+
+```
+settings set node_name kascheri12/1
+```
+
+Now go back to the first thread where golemapp is running to inspect the logs.
+
+```
 # Go back to thread 0 where golemapp is running to inspect logs
 # Ctrl b, d
 tmux ls  # View all tmux threads
 tmux a -t 0  # Attach to thread 0
 ```
-  
+
+At this point, if there have been no errors your node should appear on [Golem Stats Page](https://stats.golem.network). If not, something has gone wrong and additional troubleshooting is needed. Visit [Golem Chat](https://chat.golem.network) for assistance.
+
 ### Testing Golem
 
 1. Install Dependencies
@@ -157,7 +176,7 @@ tmux a -t 0  # Attach to thread 0
 sudo apt-get install unzip
 ```
   
-1. *Download* and *unzip* sample golem-header blender file
+1. *Download* and *unzip* sample golem-header.blend file
 
 ```
 wget http://golem.timjones.id.au/golem-header.zip
@@ -177,12 +196,20 @@ pip3 install --upgrade pip
 sudo pip3 install twisted
 ```
 
-1. Tweak a few things in the sample task and create task files
+1. Tweak a few things in the `create_task.py` file
 
-  * Specify the resources being used for the sample task. There are 3 lines, you only need one to do the sample golem-header blend file.
-  **Remove** two of the resources and put the **full path** to the `golem-header.blend`
-  file. It should be `/home/<username>/golem-header.blend`
+  * **Edit** the variable `res_golem_header` to the correct file location. 
+  This should be `/home/<username>/golem-header.blend`. Code below to edit the file using vi.
+    
+    ```
+    vi ~/Git/golem_util/create_task.py
+    ```
   
   * The automation is driven by twisted's reactor. Once changes have been made, run `python3 create_task.py`.
   Make sure there's no errors in the golemapp logs. The most common error I found was empty resources, 
   meaning I didn't put the full path of the resources I was using.
+    ```
+    python3 ~/Git/golem_util/create_task.py
+    ```
+
+This last part [Testing Golem](#testing-golem) is definitely the most tricky part and will require minor changes to get it to work. If you have questions, I can be found in [Golem Chat](https://chat.golem.network) `@kenny.ascheri`
