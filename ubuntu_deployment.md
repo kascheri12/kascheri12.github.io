@@ -60,6 +60,25 @@ into the machine and move to [Golem Installation](#golem-installation).
   * File->Preferences->Network->Host-Only Networks
     * Make sure there is at least one entry, if not add one.
 
+1. Windows Firewall Settings
+  * *Press* `Windows Key` + r
+  * *Type* wf.msc
+  * Inbound Rules -> New Rule
+    * TCP Rule
+      * Port
+      * TCP; 40103, 40104 **Think about this, these ports must be correct for this to work. Windows Firewall will block everything that's not correct**
+      * Allow the connection
+      * Check all boxes: Domain, Public, Private
+      * GolemTCP
+    * UDP Rule
+      * Port
+      * UDP; 40103, 40104 **Think about this, these ports must be correct for this to work. Windows Firewall will block everything that's not correct**
+      * Allow the connection
+      * Check all boxes: Domain, Public, Private
+      * GolemUDP
+  * Outbound Rules -> New Rule
+    * 2 more rules, repeat the same as above.
+
 1. New VM
   * Name: golem-1
   * Type: Linux
