@@ -61,8 +61,12 @@ into the machine and move to [Golem Installation](#golem-installation).
     * Make sure there is at least one entry, if not add one.
 
 1. New VM
-  * Name: golem; Type: Linux; Version: Ubuntu (64-bit); 10GB RAM
-  
+  * Name: golem-1
+  * Type: Linux
+  * Version: Ubuntu (64-bit)
+  * 10000MB RAM
+  * 30GB Hard Drive
+
 1. Setting the Settings
 
 We want the right settings for CPU resources being allocated to this VM as well as ability to 
@@ -78,11 +82,15 @@ SSH from putty or terminal (since VirtualBox's tty is atrocious)
     * Adapter 1
       * Advanced->Port Forwarding
       * TCP Host Port 2222 -> Guest Port 22
+      * TCP Host Port 40104 -> Guest Port 40102
+      * TCP Host Port 40105 -> Gust Port 40103
+      * UDP Host Port 40104 -> Guest Port 40102
+      * UDP Host Port 40105 -> Guest Port 40103
 
 1. Start VM & Install Ubuntu 16.04
   * Hint: Defaults are fine (Press enter about 8 times in a row)
+  * *Tic* `openssh-server` as an installation option
 
-  
 ### Golem Installation
 
 1. SSH into VM
@@ -164,6 +172,10 @@ The first thing I like to do from `golemcli` is name my node so I know which one
 
 ```
 settings set node_name kascheri12/1
+settings set num_cores 2
+settings set max_memory_size 6000000
+settings set min_price 1
+settings set getting_tasks_interval 1
 ```
 
 Now go back to the first thread where golemapp is running to inspect the logs.
