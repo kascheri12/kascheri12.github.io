@@ -87,7 +87,6 @@ into the machine and move to [Golem Installation](#golem-installation).
   * 30GB Hard Drive
 
 1. Setting the Settings
-
 We want the right settings for CPU resources being allocated to this VM as well as ability to 
 SSH from putty or terminal (since VirtualBox's tty is atrocious)
 
@@ -153,16 +152,19 @@ sudo shutdown -r now
 You're going to want at least 2-3 command line threads most likely.
   1. golemapp
   2. golemcli
-  3. automated task creation (for testing)
+  3. automated task creation (for testing, if desired)
   
 Use `tmux` for different threads inside the same ssh session. 
 Also the `tmux` threads persist when the ssh session disconnects.
 The most useful `tmux` commands I use all the time:
   * `tmux` - Open new thread
+  * `Ctrl + b, "` - Start new thread in bottom half of current
+  * `Ctrl + b, ⇧`
   * `Ctrl + b, d` - exit current thread without killing
   * `tmux ls` - list threads
   * `tmux a -t 0` - Attach to target thread giving list value from ls output
-  * `Ctrl + b, [` - Allows for scrolling, page-up, page-down, q to quit
+  * `Ctrl + b, [` - Allows for scrolling; page-up, page-down, q to quit
+  * More found [at this blog](http://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)
 
 Moving on.... now lets get started with running golem
 
@@ -209,6 +211,11 @@ tmux a -t 0  # Attach to thread 0
 At this point, if there have been no errors your node should appear on <a href="https://stats.golem.network" target="\_blank">Golem Stats Page</a>. If not, something has gone wrong and additional troubleshooting is needed. Visit <a href="https://chat.golem.network" target="\_blank">Golem Chat</a> for assistance.
 
 ### Testing Golem
+This next section will be the most difficult because in order to have a 
+successful task request, filenames and locations must be precisely correct. 
+It's going to take a little bit of change, but I've built a base sample 
+task in a JSON style syntax that will only need some slight changes 
+to get working.
 
 1. Install Dependencies
   * Unzip
