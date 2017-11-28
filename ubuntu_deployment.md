@@ -9,7 +9,7 @@
 </script>
 
 
-# Installing, Running, and Testing Golem 0.9.0 on Ubuntu 16.04
+# Installing, Running, and Testing Golem 0.9.1 on Ubuntu 16.04
 
 ## Contents
   * **[Google Cloud](#google-cloud-deployment)**
@@ -116,9 +116,8 @@ SSH from putty or terminal (since VirtualBox's tty is atrocious)
 
 ```
 #### Download Golem RC, Decompress ####
-wget https://github.com/golemfactory/golem/releases/download/0.9.0/golem-linux_x64-0.9.0.tar.gz
-tar xvzf golem-linux_x64-0.9.0.tar.gz
-
+wget https://github.com/golemfactory/golem/releases/download/0.9.1/golem-linux_x64-0.9.1.tar.gz
+tar xvzf golem-linux_x64-0.9.1.tar.gz
 
 #### Download and install Docker ####
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -172,7 +171,7 @@ Moving on.... now lets get started with running golem
 # Start new thread
 tmux
 # Start golemapp from this thread (always thread 0)
-~/golem-0.9.0/golemapp
+~/golem-0.9.1/golemapp
 ```
 
 Wait until you see logs for `Docker: pulling image golemfactory/base`, `Docker: pulling image golemfactory/blender`, & `Docker: pulling image golemfactory/luxrender`.
@@ -183,7 +182,7 @@ Once you see these logs (and no errors have occurred) move on to the next step.
 # Ctrl + b, d
 tmux
 # Start the golemcli to see diagnostics
-~/golem-0.9.0/golemcli -i
+~/golem-0.9.1/golemcli -i
 ```
 
 From `golemcli` you can inspect settings, tasks, subtasks, etc. Play around with commands to get the feel of things. 
