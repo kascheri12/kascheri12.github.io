@@ -219,42 +219,44 @@ to get working.
 1. Install Dependencies
   * Unzip
 
-```
-# Install Unzip
-sudo apt-get install unzip
-```
+  ```
+  # Install Unzip
+  sudo apt-get install unzip
+  ```
   
 1. *Download* and *unzip* sample golem-header.blend file
 
-```
-wget http://golem.timjones.id.au/golem-header.zip
-unzip golem-header.zip
-```
+  ```
+  wget http://golem.timjones.id.au/golem-header.zip
+  unzip golem-header.zip
+  ```
 
 1. *Clone* golem_util repo into Git subfolder
 
-```
-mkdir -p ~/Git
-cd ~/Git
-git clone https://github.com/kascheri12/golem_util.git
-
-## optional - install dependencies for automation
-sudo apt-get install -y python3-pip
-pip3 install --upgrade pip
-sudo pip3 install twisted
-```
+  ```
+  mkdir -p ~/Git
+  cd ~/Git
+  git clone https://github.com/kascheri12/golem_util.git
+  
+  ## optional - install dependencies for automation
+  sudo apt-get install -y python3-pip
+  pip3 install --upgrade pip
+  sudo pip3 install twisted
+  ```
 
 1. Tweak a few things in the `create_task.py` file
 
   * **Edit** the variable `res_golem_header` to the correct file location. 
-  This should be `/home/<username>/golem-header.blend`. Code below to edit the file using vi.
+  This should be `/home/<username>/golem-header.blend`. Code below 
+  to edit the file using vi.
     
     ```
     vi ~/Git/golem_util/create_task.py
     ```
   
-  * The automation is driven by twisted's reactor. Once changes have been made, run `python3 create_task.py`.
-  Make sure there's no errors in the golemapp logs. The most common error I found was empty resources, 
+  * The automation is driven by twisted's reactor. Once changes have been 
+  made, run `python3 create_task.py`. Make sure there's no errors in 
+  the golemapp logs. The most common error I found was empty resources, 
   meaning I didn't put the full path of the resources I was using.
     ```
     python3 ~/Git/golem_util/create_task.py
