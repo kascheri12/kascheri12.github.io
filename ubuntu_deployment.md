@@ -1,15 +1,4 @@
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109439081-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-109439081-1');
-</script>
-
-
-# Installing, Running, and Testing Golem 0.9.1 on Ubuntu 16.04
+# Installing, Running, and Testing Golem 0.11.0 on Ubuntu 16.04
 
 ## Contents
   * **[Google Cloud](#google-cloud-deployment)**
@@ -17,6 +6,53 @@
   * **[Golem Installation](#golem-installation)**
   * **[Golem Execution](#executing-golemapp--golemcli)**
   * **[Testing Golem](#testing-golem)**
+
+### Microsoft Azure
+
+**Microsoft is offering $200 to anyone willing to tryout their Azure resources**
+
+1. Visit <a href="https://portal.azure.com" target="\_blank">Microsoft Azure</a>
+  * Create new account or use existing one
+  
+1. Select Virtual Machines from the menu on the left hand side of the screen
+
+1. Select `+ Add`
+
+1. Choose Ubuntu Server
+
+1. Ubuntu Server 16.04 LTS
+
+1. Select `Create`
+
+1. Fill out the `Basics` info for your virtual machine
+  * Name: golem-1
+  * SSD
+  * username: golemuser
+  * Password
+  * Resource Group: golem
+  * Location: West US
+
+1. Select the VM package you're wanting to purchase. The smallest size at the time of writing is `D2S_V3` and works for running golem.
+  * Press Select
+
+1. Settings
+  * Click OK
+
+1. `Create` the VM
+
+While waiting for the Virtual Machine to deploy (approx 5-10 minutes), 
+Select `Virtual Networks` from the left hand menu,
+select `golem-vnet` -> `Overview` -> `golem-1615` from Connected Devices
+select IP Configurations 
+  * IP Forwarding : Enabled
+  
+Also need to add port forwarding rules in the security group. Those instructions will go here.
+  
+Use putty or terminal, depending on your operating system, to SSH into 
+the newly deployed Virtual Machine.
+
+
+
 
 ### Google Cloud Deployment
 
@@ -115,30 +151,10 @@ SSH from putty or terminal (since VirtualBox's tty is atrocious)
   * Issue commands below to install golem and dependencies
 
 ```
-#### Download Golem RC, Decompress ####
-wget https://github.com/golemfactory/golem/releases/download/0.9.1/golem-linux_x64-0.9.1.tar.gz
-tar xvzf golem-linux_x64-0.9.1.tar.gz
-
-#### Download and install Docker ####
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-sudo apt-get update
-sudo apt-get install -y docker-ce
-
-
-#### Add docker group to current user
-sudo usermod -aG docker ${USER}
-
-
-#### Download and install HyperDrive ####
-wget https://github.com/mfranciszkiewicz/golem-hyperdrive/releases/download/v0.2.3/hyperg_0.2.3_linux-x64.tar.gz
-tar xvzf hyperg_0.2.3_linux-x64.tar.gz
-sudo cp -r hyperg/* /usr/local/bin
-
-
-#### Check python #### Maybe Optional/Unnecessary
-which python3
-sudo ln -s /usr/bin/python3 /usr/local/bin/python
+#### Download and install latest version of Golem ####
+wget https://raw.githubusercontent.com/golemfactory/golem/develop/Installer/Installer_Linux/install.sh
+chmod +x install.sh
+./install.sh
 
 
 #### Restart ####
@@ -157,12 +173,12 @@ Use `tmux` for different threads inside the same ssh session.
 Also the `tmux` threads persist when the ssh session disconnects.
 The most useful `tmux` commands I use all the time:
   * `tmux` - Open new thread
-  * `Ctrl + b, "` - Start new thread in bottom half of current
-  * `Ctrl + b, ⇧`
+  * `Ctrl + b, "` - Start new thread in bottom half of current screen
+  * `Ctrl + b, ⇧` - Change focus to other area
+  * `Ctrl + b, [` - Allows for scrolling; page-up, page-down, q to quit
   * `Ctrl + b, d` - exit current thread without killing
   * `tmux ls` - list threads
   * `tmux a -t 0` - Attach to target thread giving list value from ls output
-  * `Ctrl + b, [` - Allows for scrolling; page-up, page-down, q to quit
   * More found [at this blog](http://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)
 
 Moving on.... now lets get started with running golem
@@ -170,19 +186,18 @@ Moving on.... now lets get started with running golem
 ```
 # Start new thread
 tmux
-# Start golemapp from this thread (always thread 0)
-~/golem-0.9.1/golemapp
+# Start golemapp from this thread
+golemapp
 ```
 
 Wait until you see logs for `Docker: pulling image golemfactory/base`, `Docker: pulling image golemfactory/blender`, & `Docker: pulling image golemfactory/luxrender`.
 Once you see these logs (and no errors have occurred) move on to the next step.
 
 ```
-# Exit the tmux thread and start another
-# Ctrl + b, d
-tmux
+# Start another tmux thread at the bottom half
+# Ctrl + b, "
 # Start the golemcli to see diagnostics
-~/golem-0.9.1/golemcli -i
+golemcli -i
 ```
 
 From `golemcli` you can inspect settings, tasks, subtasks, etc. Play around with commands to get the feel of things. 
@@ -191,7 +206,7 @@ A list of commands can be found at <a href="https://github.com/golemfactory/gole
 The first thing I like to do from `golemcli` is name my node so I know which one is mine at <a href="https://stats.golem.network" target="\_blank">Golem Stats Page</a>.
 
 ```
-settings set node_name kascheri12/1
+settings set node_name my_golem_node
 settings set num_cores 2
 settings set max_memory_size 6000000
 settings set min_price 1
@@ -201,10 +216,10 @@ settings set getting_tasks_interval 1
 Now go back to the first thread where golemapp is running to inspect the logs.
 
 ```
-# Go back to thread 0 where golemapp is running to inspect logs
-# Ctrl b, d
-tmux ls  # View all tmux threads
-tmux a -t 0  # Attach to thread 0
+# Go back to the thread where golemapp is running to inspect logs
+# Ctrl b, DOWNARROW
+# Ctrl b, [ ## To initial scrolling mode. Use UPARROW to scroll
+# Ctrl q    ## To quit scrolling mode.
 ```
 
 At this point, if there have been no errors your node should appear on <a href="https://stats.golem.network" target="\_blank">Golem Stats Page</a>. If not, something has gone wrong and additional troubleshooting is needed. Visit <a href="https://chat.golem.network" target="\_blank">Golem Chat</a> for assistance.
@@ -262,4 +277,16 @@ to get working.
     python3 ~/Git/golem_util/create_task.py
     ```
 
-This last part [Testing Golem](#testing-golem) is definitely the most tricky part and will require minor changes to get it to work. If you have questions, I can be found in <a href="https://chat.golem.network" target="_blank">Golem Chat</a> `@kenny.ascheri`
+This last part [Testing Golem](#testing-golem) is definitely the most tricky part and will require minor changes to get it to work. If you have questions, I can be found in <a href="https://chat.golem.network" target="\_blank">Golem Chat</a> `@kenny.ascheri`
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109439081-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109439081-1');
+</script>
