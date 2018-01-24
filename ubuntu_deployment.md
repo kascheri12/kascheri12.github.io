@@ -1,7 +1,7 @@
 # Installing, Running, and Testing Golem 0.11.0 on Ubuntu 16.04
 
 ## Contents
-  * **[Microsoft Azure](#microsoft-azure)
+  * **[Microsoft Azure](#microsoft-azure)**
   * **[Google Cloud](#google-cloud-deployment)**
   * **[VirtualBox](#virtualbox-deployment)**
   * **[Golem Installation](#golem-installation)**
