@@ -161,6 +161,47 @@ chmod +x install.sh
 #### Restart ####
 sudo shutdown -r now
 
+
+#### Dev Install Instructions ####
+tmux
+
+# Install python3.6 and dependencies
+sudo add-apt-repository ppa:jonathonf/python-3.6
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt update && sudo apt install python3.6 python3.6-venv python3.6-dev python3-pip virtualenv -y
+
+# Clone golem repository and create virtual environment
+git clone https://github.com/golemfactory/golem.git
+cd golem
+virtualenv --python=python3.6 venv
+source venv/bin/activate
+
+# Install golem dependencies
+sudo apt install openssl python3-dev libffi-dev pkg-config libjpeg-dev \
+    libopenexr-dev libssl-dev autoconf libgmp-dev \
+    libfreeimage-dev libtool python3-netifaces python3-psutil build-essential \
+    python3-pip docker.io -y
+
+# Add docker group to user
+sudo usermod -a -G docker $USER
+
+# Install hyperg 
+cd .. && wget https://github.com/mfranciszkiewicz/golem-hyperdrive/releases/download/v0.2.5/hyperg_0.2.5_linux-x64.tar.gz
+tar xvzf hyperg_0.2.5_linux-x64.tar.gz 
+cp hyperg/* ~/golem/venv/bin/
+
+# Restart the machine
+sudo shutdown -r now
+
+# Install latest source code of golem
+tmux
+cd golem
+source venv/bin/activate
+pip install -r requirements.txt
+python setup.py develop
+golemapp
+
+
 ```
 
 ### Executing Golemapp & Golemcli
