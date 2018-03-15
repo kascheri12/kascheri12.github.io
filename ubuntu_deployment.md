@@ -1,4 +1,4 @@
-# Installing, Running, and Testing Golem 0.11.0 on Ubuntu 16.04
+# Installing, Running, and Testing Golem on Ubuntu 16.04
 
 ## Contents
   * **[Microsoft Azure](#microsoft-azure)**
