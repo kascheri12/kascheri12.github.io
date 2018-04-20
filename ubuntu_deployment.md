@@ -14,7 +14,7 @@
 
 1. Visit <a href="https://portal.azure.com" target="\_blank">Microsoft Azure</a>
   * Create new account or use existing one
-  
+
 1. Select Virtual Machines from the menu on the left hand side of the screen
 
 1. Select `+ Add`
@@ -41,15 +41,15 @@
 
 1. `Create` the VM
 
-While waiting for the Virtual Machine to deploy (approx 5-10 minutes), 
+While waiting for the Virtual Machine to deploy (approx 5-10 minutes),
 Select `Virtual Networks` from the left hand menu,
 select `golem-vnet` -> `Overview` -> `golem-1615` from Connected Devices
-select IP Configurations 
+select IP Configurations
   * IP Forwarding : Enabled
-  
+
 Also need to add port forwarding rules in the security group. Those instructions will go here.
-  
-Use putty or terminal, depending on your operating system, to SSH into 
+
+Use putty or terminal, depending on your operating system, to SSH into
 the newly deployed Virtual Machine.
 
 
@@ -76,17 +76,17 @@ the newly deployed Virtual Machine.
   * Select a Machine Type
     * Minimum requirements I've found to work excellent:
       * 1 vCPU, 6.5GB RAM, Ubuntu 16.04, 30GB SSD
-      
+
 1. While waiting for that to be created, go to <a href="https://console.cloud.google.com/networking/" target="\_blank">VPC Network</a> -> <a href="https://console.cloud.google.com/networking/firewalls/" target="\_blank">Firewall Rules</a>
   * `Create` two firewall rules, __*egress*__ and __*ingress*__
   * For ease and simplicity, I just _**target all instances in the network**_, and IP ranges of `0.0.0.0/0` and **_Allow all_**.
   * Make sure to repeat for the other direction; if you did egress first, you also need an ingress rule.
-  
-1. You're done settings up the environment for Google, navigate back to 
-<a href="https://console.cloud.google.com/compute/" traget="\_blank">Compute Engine</a> and SSH 
+
+1. You're done settings up the environment for Google, navigate back to
+<a href="https://console.cloud.google.com/compute/" traget="\_blank">Compute Engine</a> and SSH
 into the machine and move to [Golem Installation](#golem-installation).
 
-  
+
 ### VitualBox Deployment
 
 1. Install <a href="https://virtualbox.org" target="\_blank">VirtualBox</a>
@@ -124,7 +124,7 @@ into the machine and move to [Golem Installation](#golem-installation).
   * 30GB Hard Drive
 
 1. Setting the Settings
-We want the right settings for CPU resources being allocated to this VM as well as ability to 
+We want the right settings for CPU resources being allocated to this VM as well as ability to
 SSH from putty or terminal (since VirtualBox's tty is atrocious)
 
   * Set values for RAM and CPU's
@@ -185,9 +185,9 @@ sudo apt install openssl python3-dev libffi-dev pkg-config libjpeg-dev \
 # Add docker group to user
 sudo usermod -a -G docker $USER
 
-# Install hyperg 
+# Install hyperg
 cd .. && wget https://github.com/mfranciszkiewicz/golem-hyperdrive/releases/download/v0.2.5/hyperg_0.2.5_linux-x64.tar.gz
-tar xvzf hyperg_0.2.5_linux-x64.tar.gz 
+tar xvzf hyperg_0.2.5_linux-x64.tar.gz
 cp hyperg/* ~/golem/venv/bin/
 
 # Restart the machine
@@ -210,8 +210,8 @@ You're going to want at least 2-3 command line threads most likely.
   1. golemapp
   2. golemcli
   3. automated task creation (for testing, if desired)
-  
-Use `tmux` for different threads inside the same ssh session. 
+
+Use `tmux` for different threads inside the same ssh session.
 Also the `tmux` threads persist when the ssh session disconnects.
 The most useful `tmux` commands I use all the time:
   * `tmux` - Open new thread
@@ -242,7 +242,7 @@ Once you see these logs (and no errors have occurred) move on to the next step.
 golemcli -i
 ```
 
-From `golemcli` you can inspect settings, tasks, subtasks, etc. Play around with commands to get the feel of things. 
+From `golemcli` you can inspect settings, tasks, subtasks, etc. Play around with commands to get the feel of things.
 A list of commands can be found at <a href="https://github.com/golemfactory/golem/wiki/Command-Line" target="\_blank">Golem Command Line</a>.
 
 The first thing I like to do from `golemcli` is name my node so I know which one is mine at <a href="https://stats.golem.network" target="\_blank">Golem Stats Page</a>.
@@ -267,10 +267,10 @@ Now go back to the first thread where golemapp is running to inspect the logs.
 At this point, if there have been no errors your node should appear on <a href="https://stats.golem.network" target="\_blank">Golem Stats Page</a>. If not, something has gone wrong and additional troubleshooting is needed. Visit <a href="https://chat.golem.network" target="\_blank">Golem Chat</a> for assistance.
 
 ### Testing Golem
-This next section will be the most difficult because in order to have a 
-successful task request, filenames and locations must be precisely correct. 
-It's going to take a little bit of change, but I've built a base sample 
-task in a JSON style syntax that will only need some slight changes 
+This next section will be the most difficult because in order to have a
+successful task request, filenames and locations must be precisely correct.
+It's going to take a little bit of change, but I've built a base sample
+task in a JSON style syntax that will only need some slight changes
 to get working.
 
 1. Install Dependencies
@@ -280,7 +280,7 @@ to get working.
   # Install Unzip
   sudo apt-get install unzip
   ```
-  
+
 1. *Download* and *unzip* sample golem-header.blend file
 
   ```
@@ -294,7 +294,7 @@ to get working.
   mkdir -p ~/Git
   cd ~/Git
   git clone https://github.com/kascheri12/golem_util.git
-  
+
   ## optional - install dependencies for automation
   sudo apt-get install -y python3-pip
   pip3 install --upgrade pip
@@ -303,17 +303,17 @@ to get working.
 
 1. Tweak a few things in the `create_task.py` file
 
-  * **Edit** the variable `res_golem_header` to the correct file location. 
-  This should be `/home/<username>/golem-header.blend`. Code below 
+  * **Edit** the variable `res_golem_header` to the correct file location.
+  This should be `/home/<username>/golem-header.blend`. Code below
   to edit the file using vi.
-    
+
     ```
     vi ~/Git/golem_util/create_task.py
     ```
-  
-  * The automation is driven by twisted's reactor. Once changes have been 
-  made, run `python3 create_task.py`. Make sure there's no errors in 
-  the golemapp logs. The most common error I found was empty resources, 
+
+  * The automation is driven by twisted's reactor. Once changes have been
+  made, run `python3 create_task.py`. Make sure there's no errors in
+  the golemapp logs. The most common error I found was empty resources,
   meaning I didn't put the full path of the resources I was using.
     ```
     python3 ~/Git/golem_util/create_task.py
