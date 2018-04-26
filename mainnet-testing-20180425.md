@@ -79,7 +79,7 @@ As I write this and coming up on 12 hours since the above task has been stuck at
 The Ubuntu node was flawless and had a 100% completion, until the very end!
 
 The CPU usage was running quite high around the 22 hour period. This screenshot shows the rise in CPU usage throughout the day:
-![Google Cloud Platform CPU Usage over past 24 hours throughout test](20180425_CPU_Usage.png)
+<img src="/20180425_CPU_Usage.png" alt="Google Cloud Platform CPU Usage over past 24 hours throughout test" style="max-width: 40%;">
 
 When I logged into the node and my tmux session, the `golemcli` command was giving me RPC: call errors for any command I gave it.
 
@@ -134,9 +134,9 @@ So I started throwing some list aggregation commands together in python to get t
 
 After hours of tinkering, fidgeting with variables, and finding a great place to start with this visual representation of nodes - I finally landed on these 3d networks!
 
-<iframe style="width:1000px;height:1000px;" src="golem-network-3d-20180425-macbook.html">
+<iframe style="width:800px;height:800px;" src="golem-network-3d-20180425-macbook.html">
 </iframe>
 
 
-<iframe style="width:1000px;height:1000px;" src="golem-network-3d-20180425-ubuntu.html">
+<iframe style="width:800px;height:800px;" src="golem-network-3d-20180425-ubuntu.html">
 </iframe>
