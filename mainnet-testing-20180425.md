@@ -161,8 +161,7 @@ At the beginning of this test both of the nodes had a `reserved_balance` of `0 G
 
   ```
 
-    * 26 tasks @ 50 subtasks
-    * 2 tasks @ 20 subtasks
+    * Task Summary: 26 tasks @ 50 subtasks & 2 tasks @ 20 subtasks
 
   * 28 total tasks = 14.8 GNT / task
   * 26 Finished tasks = 15.93846 GNT / **finished** task
@@ -179,13 +178,25 @@ At the beginning of this test both of the nodes had a `reserved_balance` of `0 G
 
   ```
 
-  23 tasks @ 50 subtasks
+    * Task Summary: 23 tasks @ 50 subtasks
 
   * 23 total tasks = 8.44565 GNT / task
   * 22 Finished tasks = 8.829545 GNT / **finished** task
   * 1139 finished subtasks = 0.17054 GNT / **completed** subtask
 
 
-I'm pleased with these results as a benchmark for improvement.
+## Understanding the Cost Difference
+
+It would be nice to be able to understand the price difference. Even though I tried to keep so many of the test factors the same, the prices for computations came out quite differently.
+
+I wonder if an Ubuntu node in North America could get the same rate as the above Ubuntu node did in Europe.
+
+There are many different factors that could be tested and recorded here! There's so much to learn here!
+
+
+
+
+
+# Thank you to the Golem Team!
 
 Thank you so much to the Golem Team for all the hard work to get releases out each month, to keep the communication happening in the AMA's, blogposts, and twitter among others. Keep up the great work everybody, lets keep the community growing!
