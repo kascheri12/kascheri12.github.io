@@ -6,15 +6,15 @@ This test was conducted with two nodes as requestors located in different parts 
 
 1. MacBook Pro - MacOS 10.13.4
   * Location: Oregon, North America
-  * [Machine Specs](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i7-2.8-15-dual-graphics-mid-2015-retina-display-specs.html)
+  * <a href="https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i7-2.8-15-dual-graphics-mid-2015-retina-display-specs.html" target="\_blank">Machine Specs</a>
 
 2. Google Cloud Platform - Ubuntu 16.04 LTS
   * Location: St. Ghislain, Belgium
-  * [1 vCPU, 6.5 GB, 30 GB SSD](https://cloud.google.com/compute/docs/regions-zones/)
+  * <a href="https://cloud.google.com/compute/docs/regions-zones/" target="\_blank">1 vCPU, 6.5 GB, 30 GB SSD</a>
 
 ## Task Template
 
-Today's test will be rendering a very simple blender file, the Golem Header blender file from [golem.timejones.id.au](http://golem.timjones.id.au/).
+Today's test will be rendering a very simple blender file, the Golem Header blender file from <a href="http://golem.timjones.id.au/" target="\_blank">golem.timejones.id.au</a>.
 
 The sample task settings I used for this test were 50 subtasks per task, resolution of 6000x4000, a bidding price of 3GNT, and a subtask timeout of 8 minutes.
 
