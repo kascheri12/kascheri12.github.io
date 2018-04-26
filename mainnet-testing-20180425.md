@@ -134,9 +134,9 @@ So I started throwing some list aggregation commands together in python to get t
 
 After hours of tinkering, fidgeting with variables, and finding a great place to start with this visual representation of nodes - I finally landed on these 3d networks!
 
-<iframe style="width:800px;height:800px;" src="golem-network-3d-20180425-macbook.html">
+<iframe style="width:800px;height:830px;" src="golem-network-3d-20180425-macbook.html">
 </iframe>
 
 
-<iframe style="width:800px;height:800px;" src="golem-network-3d-20180425-ubuntu.html">
+<iframe style="width:800px;height:830px;" src="golem-network-3d-20180425-ubuntu.html">
 </iframe>
