@@ -14,7 +14,7 @@ This test was conducted with two nodes as requestors located in different parts 
 
 ## Task Template
 
-For my test today I'll be rendering a very simple blender file, the Golem Header blender file from [golem.timejones.id.au](http://golem.timjones.id.au/).
+Today's test will be rendering a very simple blender file, the Golem Header blender file from [golem.timejones.id.au](http://golem.timjones.id.au/).
 
 The sample task settings I used for this test were 50 subtasks per task, resolution of 6000x4000, a bidding price of 3GNT, and a subtask timeout of 8 minutes.
 
@@ -51,7 +51,7 @@ def build_simple_golem_header_task(self,subtasks,height,width,price,subtask_to_m
 
 Since I chose to have a large amount of subtasks per task during this test I also decided to only request a new task once per hour. I checked back up after a few hours had elapsed and both requesting nodes were doing great!
 
-The #MacBook# output below shows the tasks being created each hour and the tasks being computed and completed.
+The *MacBook* output below shows the tasks being created each hour followed by the tasks being computed and completed.
 
 ```
 (venv) MacBook-Pro:golem_util$ python create_task.py
@@ -74,7 +74,7 @@ cc49c486-48ff-11e8-a21e-656778299a23  0:06:24          50  Computing  96.00 %
 
 ```
 
-As I write this and coming up on 12 hours since the above task has been stuck at 98%, I don't have high hopes that it's going to finish successfully. And the same goes with the task at 96% also. Those are two casualties out of the 27 tasks in the past 24 hours from this one node alone.
+As I write this it's coming up on 12 hours since the above task has been stuck at 98%, I don't have high hopes that it's going to finish successfully. And the same goes with the task at 96% also. Those are two casualties out of the 27 tasks in the past 24 hours from this one node alone. As an additional note on this topic - I tried to restart a few failed subtasks with command `golemcli subtasks restart id` for the task stuck at 98% but it didn't show signs of change.
 
 The Ubuntu node was flawless and had a 100% completion, until the very end!
 
@@ -126,17 +126,64 @@ d6d70f76-490a-11e8-aa55-1079749b012b  0:23:24          50  Computing  78.00 %
 
 
 
-## Analyzing the Test
+## Analyzing the Tests
 
 As the day wore on and every few hours things seemed to be going well, it dawned on me that I could probably capture this data fairly simply using python and gather some node names from my subtask request output. If I could put these names together, I could build a 3d network graph based on this test data! How exciting!!
 
-So I started throwing some list aggregation commands together in python to get the `golemcli` output into analyzable objects.
+So I started throwing some list aggregation commands strung together in python to handle the output from `golemcli` into analyzable data.
 
-After hours of tinkering, fidgeting with variables, and finding a great place to start with this visual representation of nodes - I finally landed on these 3d networks!
+After hours of tinkering and fidgeting with variables, I was finally able to get these 3d networks created from the data gathered from my tests.
 
+#### Golem Network Providers in MacBook tasks
 <iframe style="width:850px;height:850px;" src="golem-network-3d-20180425-macbook.html">
 </iframe>
-
-
+<br>
+<br>
+#### Golem Network Providers in Ubuntu tasks
 <iframe style="width:850px;height:850px;" src="golem-network-3d-20180425-ubuntu.html">
 </iframe>
+
+
+
+## Cost Analysis
+
+At the beginning of this test both of the nodes had a `reserved_balance` of `0 GNT` and had not requested any tasks on mainnet yet.
+
+*MacBook Results*
+
+  ```
+  available_balance: 93.192083 GNT
+  eth_balance: 0.018597 ETH
+  reserved_balance: 414.400000 GNT
+  total_balance: 507.592083 GNT
+
+  ```
+
+  26 tasks @ 50 subtasks
+  2 tasks @ 20 subtasks
+
+  * 28 total tasks = 14.8 GNT / task
+  * 26 Finished tasks = 15.93846 GNT / *finished* task
+  * 1335 finished subtasks = 0.31041 GNT / *completed* subtask
+
+*Google Clout Platform Ubuntu Results*
+
+
+  ```
+  available_balance: 215.25 GNT
+  eth_balance: 0.011440 ETH
+  reserved_balance: 194.250000 GNT
+  total_balance: 409.500000 GNT
+
+  ```
+
+  23 tasks @ 50 subtasks
+
+  * 23 total tasks = 8.44565 GNT / task
+  * 22 Finished tasks = 8.829545 GNT / *finished* task
+  * 1139 finished subtasks = 0.17054 GNT / *completed* subtask
+
+
+I'm pleased with these results as a benchmark for improvement.
+
+Thank you so much to the Golem Team for all the hard work to get releases out each month, to keep the communication happening in the AMA's, blogposts, and twitter among others. Keep up the great work everybody, lets keep the community growing!
