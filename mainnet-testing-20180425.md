@@ -104,18 +104,7 @@ id                                    ETA        subtasks  status     completion
 a0deb5b8-48ae-11e8-941b-1079749b012b  0:00:00          50  Finished   100.00 %
 eca2da1c-48e0-11e8-a84b-1079749b012b  0:00:00          50  Finished   100.00 %
 65ff2ea4-48bf-11e8-bcef-1079749b012b  0:00:00          50  Finished   100.00 %
-cf18440c-485a-11e8-82d7-1079749b012b  0:00:00          50  Finished   100.00 %
-4fa40eae-48e9-11e8-9da5-1079749b012b  0:00:00          50  Finished   100.00 %
-2eb7bb42-48d0-11e8-8cfc-1079749b012b  0:00:00          50  Finished   100.00 %
-7bd04a78-4895-11e8-bd2d-1079749b012b  0:00:00          50  Finished   100.00 %
-57bad9b4-487c-11e8-aca1-1079749b012b  0:00:00          50  Finished   100.00 %
-ddccda52-489d-11e8-88f0-1079749b012b  0:00:00          50  Finished   100.00 %
-7563f1cc-4902-11e8-8065-1079749b012b  0:00:00          50  Finished   100.00 %
-94eccf8a-486b-11e8-a365-1079749b012b  0:00:00          50  Finished   100.00 %
-f496d318-4873-11e8-b53a-1079749b012b  0:00:00          50  Finished   100.00 %
-b1298a2c-48f1-11e8-b205-1079749b012b  0:00:00          50  Finished   100.00 %
-19f66fac-488d-11e8-9d3b-1079749b012b  0:00:00          50  Finished   100.00 %
-c74d2594-48c7-11e8-83b6-1079749b012b  0:00:00          50  Finished   100.00 %
+...
 d6d70f76-490a-11e8-aa55-1079749b012b  0:23:24          50  Computing  78.00 %
 30e45e86-4863-11e8-8831-1079749b012b  0:00:00          50  Finished   100.00 %
 6d3ca0b4-4852-11e8-8949-1079749b012b  0:00:00          50  Finished   100.00 %
@@ -191,12 +180,9 @@ It would be nice to be able to understand the price difference. Even though I tr
 
 I wonder if an Ubuntu node in North America could get the same rate as the above Ubuntu node did in Europe.
 
-There are many different factors that could be tested and recorded here! There's so much to learn here!
-
-
-
+There are many different factors that could be tested and recorded, there's so much more here!
 
 
 # Thank you to the Golem Team!
 
-Thank you so much to the Golem Team for all the hard work to get releases out each month, to keep the communication happening in the AMA's, blogposts, and twitter among others. Keep up the great work everybody, lets keep the community growing!
+Thank you so much to the Golem Team for all the hard work to get releases out each month, to keep the communication happening in the AMA's, blogposts, and twitter. Keep up the great work everybody, lets keep the community growing!
