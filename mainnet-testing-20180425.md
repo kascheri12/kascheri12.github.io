@@ -5,12 +5,12 @@
 This test was conducted with two nodes as requestors located in different parts of the world at approx the same time.
 
 1. MacBook Pro - MacOS 10.13.4
-  * Location: North America
+  * Location: Oregon, North America
   * [Machine Specs](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i7-2.8-15-dual-graphics-mid-2015-retina-display-specs.html)
 
 2. Google Cloud Platform - Ubuntu 16.04 LTS
-  * Location: Europe
-  * 1 vCPU, 6.5 GB, 30 GB SSD
+  * Location: St. Ghislain, Belgium
+  * [1 vCPU, 6.5 GB, 30 GB SSD](https://cloud.google.com/compute/docs/regions-zones/)
 
 ## Task Template
 
@@ -132,11 +132,11 @@ As the day wore on and every few hours things seemed to be going well, it dawned
 
 So I started throwing some list aggregation commands together in python to get the `golemcli` output into analyzable objects.
 
-After hours of tinkering, fidgeting with variables, and finding a great place to start with this visual representation of nodes - I finally landed on this
+After hours of tinkering, fidgeting with variables, and finding a great place to start with this visual representation of nodes - I finally landed on these 3d networks!
 
-<iframe style="width:100%;" src="golem-network-3d-20180425-macbook.html">
+<iframe style="width:1000px;height:1000px;" src="golem-network-3d-20180425-macbook.html">
 </iframe>
 
 
-<iframe style="width:100%" src="golem-network-3d-20180425-ubuntu.html">
+<iframe style="width:1000px;height:1000px;" src="golem-network-3d-20180425-ubuntu.html">
 </iframe>
