@@ -1,6 +1,5 @@
 ---
-theme: jekyll-theme-cayman
-output: 
+output:
   html_document:
     includes:
        in_header: analytics.html
