@@ -51,7 +51,7 @@ def build_simple_golem_header_task(self,subtasks,height,width,price,subtask_to_m
 
 Since I chose to have a large amount of subtasks per task during this test I also decided to only request a new task once per hour. I checked back up after a few hours had elapsed and both requesting nodes were doing great!
 
-The *MacBook* output below shows the tasks being created each hour followed by the tasks being computed and completed.
+The **MacBook** output below shows the tasks being created each hour followed by the tasks being computed and completed.
 
 ```
 (venv) MacBook-Pro:golem_util$ python create_task.py
@@ -134,12 +134,14 @@ So I started throwing some list aggregation commands strung together in python t
 
 After hours of tinkering and fidgeting with variables, I was finally able to get these 3d networks created from the data gathered from my tests.
 
-#### Golem Network Providers in MacBook tasks
+### Golem Network Providers in MacBook tasks
+The center-most dot in the network - the one with the lightest color - was locked in on every task. That doesn't mean that this node provided successful results or not though. As the dots get further away from the center of the spherical shape and the color gets darker, the fewer tasks that each particular node has been locked into as a provider for my requests.
 <iframe style="width:850px;height:850px;" src="golem-network-3d-20180425-macbook.html">
 </iframe>
 <br>
 <br>
-#### Golem Network Providers in Ubuntu tasks
+### Golem Network Providers in Ubuntu tasks
+The same explanation stands for this graph as well as explained above. The nodes that are closer to the edges of the sphere were less involved in my requests than the nodes closer to the center.
 <iframe style="width:850px;height:850px;" src="golem-network-3d-20180425-ubuntu.html">
 </iframe>
 
@@ -149,7 +151,7 @@ After hours of tinkering and fidgeting with variables, I was finally able to get
 
 At the beginning of this test both of the nodes had a `reserved_balance` of `0 GNT` and had not requested any tasks on mainnet yet.
 
-*MacBook Results*
+**MacBook Results**
 
   ```
   available_balance: 93.192083 GNT
@@ -159,14 +161,14 @@ At the beginning of this test both of the nodes had a `reserved_balance` of `0 G
 
   ```
 
-  26 tasks @ 50 subtasks
-  2 tasks @ 20 subtasks
+    * 26 tasks @ 50 subtasks
+    * 2 tasks @ 20 subtasks
 
   * 28 total tasks = 14.8 GNT / task
-  * 26 Finished tasks = 15.93846 GNT / *finished* task
-  * 1335 finished subtasks = 0.31041 GNT / *completed* subtask
+  * 26 Finished tasks = 15.93846 GNT / **finished** task
+  * 1335 finished subtasks = 0.31041 GNT / **completed** subtask
 
-*Google Clout Platform Ubuntu Results*
+**Google Clout Platform Ubuntu Results**
 
 
   ```
@@ -180,8 +182,8 @@ At the beginning of this test both of the nodes had a `reserved_balance` of `0 G
   23 tasks @ 50 subtasks
 
   * 23 total tasks = 8.44565 GNT / task
-  * 22 Finished tasks = 8.829545 GNT / *finished* task
-  * 1139 finished subtasks = 0.17054 GNT / *completed* subtask
+  * 22 Finished tasks = 8.829545 GNT / **finished** task
+  * 1139 finished subtasks = 0.17054 GNT / **completed** subtask
 
 
 I'm pleased with these results as a benchmark for improvement.
