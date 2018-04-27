@@ -18,3 +18,10 @@ This is a new one I'm trying to understand and nail down. The idea is that I'm f
 ### Average Nodes Connected per Day
 
 <iframe style="width:100%;" src="daily_avg_nodes_connected_10_days.html"></iframe>
+
+
+### New Unique Node Count per Snapshot
+
+The way I'm finding these values are by counting the number of node_id's in a snapshop that aren't in any previous snapshots. This is the y value of the graph.
+
+<iframe style="width:100%;" src="summary_last_10_days.html"
