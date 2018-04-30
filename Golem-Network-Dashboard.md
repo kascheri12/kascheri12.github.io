@@ -16,7 +16,7 @@ The function that builds these values is [get_daily_aggregate_totals()](https://
 
 Here's pseudo code for the functions:
   * [get_avg_new_unique_node_count_on_date(date)](https://github.com/kascheri12/golem_util/blob/prod/analyze_logs.py#L528)
-    * Gather lists of distinct_node_ids_logged_on_date and distinct_timestamps_on_date, and distinct_node_ids_logged_before_date
+    * Gather lists of distinct_node_ids_logged_on_date, distinct_timestamps_on_date, and distinct_node_ids_logged_before_date
     * Get new_unique_nodes_on_date from distinct_node_ids_logged_on_date that are not in distinct_node_ids_logged_before_date
     * return len(new_unique_nodes_on_date)/len(distinct_timestamps_on_date)
   * [get_avg_requested_subtasks_on_date(date)](https://github.com/kascheri12/golem_util/blob/prod/analyze_logs.py#L544)
