@@ -17,7 +17,7 @@ This is a new one I'm trying to understand and nail down. The idea is that I'm f
 
 ### Average Nodes Connected per Day
 
-<iframe style="width:100%;height:600px" src="daily_avg_nodes_connected_10_days.html"></iframe>
+<iframe style="width:100%;height:600px" src="daily_avg_nodes_connected_30_days.html"></iframe>
 
 
 ### New Unique Node Count per Snapshot
