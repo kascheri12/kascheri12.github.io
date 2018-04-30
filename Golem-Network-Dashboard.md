@@ -27,7 +27,8 @@ Here's pseudo code for the functions:
     * Find list_dist_timestamps_on_date from list_nodes_on_date
     * total_count_subtasks_subtasks = sum(subtasks_success) in list_nodes_on_date
     * return total_count_subtasks_success / len(list_nodes_on_date)
-    
+
+The reason that the average total successful subtasks on a given date is greater than the average requested subtasks is because this is only a snapshot in time of the nodes that are connected. A node that has completed subtasks for another might still be connected to the network while the requested has since left the network thereby removing that count from any future snapshots.
 
 <iframe style="width:100%;height:600px" src="daily_aggregate_totals_10_days.html"></iframe>
 
