@@ -3,12 +3,17 @@
 # Golem Network Dashboard
 
 
+<div class="collapse-div-graph">
+
 ### Golem Network Summary
 
 This is the eldest of the graphs that I've built to date; this is a summary of some standard network resources along with a basic node count. The three values for CPU Cores, Allowed Resource Memory, and Allowed Resource Size are found based on summing the corresponding values of the active nodes in a snapshot.
 
 <iframe style="width:100%;height:600px" src="graphs/golem-network.html"></iframe>
 
+</div>
+
+<div class="collapse-div-graph">
 
 ### Daily Aggregate Totals
 
@@ -34,6 +39,9 @@ The reason that the average total completed subtasks on a given date is greater 
 
 <iframe style="width:100%;height:600px" src="graphs/daily_aggregate_totals_10_days.html"></iframe>
 
+</div>
+
+<div class="collapse-div-graph">
 
 ### Average Nodes Connected per Day
 
@@ -46,6 +54,9 @@ Pseudo code:
 
 <iframe style="width:100%;height:600px" src="graphs/daily_avg_nodes_connected_30_days.html"></iframe>
 
+</div>
+
+<div class="collapse-div-graph">
 
 ### New Unique Node Count per Snapshot
 
@@ -60,5 +71,7 @@ Pseudo code:
       * avg_new_for_ts = len(new_nodes_this_ts) / cnt_distinct_ts_for_new_nodes
 
 <iframe style="width:100%;height:600px" src="graphs/summary_last_10_days.html"></iframe>
+
+</div>
 
 {% include footer.html %}
