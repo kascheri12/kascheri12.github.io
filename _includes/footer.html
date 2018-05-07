@@ -3,6 +3,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function() {
-
+  $( ".markdown-body" ).accordion();
+  $(".markdown-body").accordion({ header: "h3", collapsible: true, active: false ,heightStyle: "content" });
 });
 </script>
