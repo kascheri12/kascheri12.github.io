@@ -3,19 +3,14 @@
 # Golem Network Dashboard
 
 
-<div class="collapse-div-graph">
-
-<h3>Golem Network Summary</h3>
+### Golem Network Summary
 
 This is the eldest of the graphs that I've built to date; this is a summary of some standard network resources along with a basic node count. The three values for CPU Cores, Allowed Resource Memory, and Allowed Resource Size are found based on summing the corresponding values of the active nodes in a snapshot.
 
 <iframe style="width:100%;height:600px" src="graphs/golem-network.html"></iframe>
 
-</div>
 
-<div class="collapse-div-graph">
-
-<h3>Daily Aggregate Totals</h3>
+### Daily Aggregate Totals
 
 This is a new one I'm trying to put together and nail down. I'm trying to find the average values per day of snapshots of new unique nodes, subtasks requested, and subtasks computed on the date. Many nodes can come and go throughout the day so I thought that an average amongst the snapshots collected per day would work as a standard.
 
@@ -39,11 +34,8 @@ The reason that the average total completed subtasks on a given date is greater 
 
 <iframe style="width:100%;height:600px" src="graphs/daily_aggregate_totals_10_days.html"></iframe>
 
-</div>
 
-<div class="collapse-div-graph">
-
-<h3>Average Nodes Connected per Day</h3>
+### Average Nodes Connected per Day
 
 This one is pretty straight-forward. 
 
@@ -54,11 +46,8 @@ Pseudo code:
 
 <iframe style="width:100%;height:600px" src="graphs/daily_avg_nodes_connected_30_days.html"></iframe>
 
-</div>
 
-<div class="collapse-div-graph">
-
-<h3>New Unique Node Count per Snapshot</h3>
+### New Unique Node Count per Snapshot
 
 This one takes the longest to build because of the iterative nature of continuing to compare a growing list of values in the past that are not newly unique nodes anymore. This graph is not completely accurate since the node_id's being reviewed are only one's that have been logged in the data gathered here. 
 
@@ -71,7 +60,5 @@ Pseudo code:
       * avg_new_for_ts = len(new_nodes_this_ts) / cnt_distinct_ts_for_new_nodes
 
 <iframe style="width:100%;height:600px" src="graphs/summary_last_10_days.html"></iframe>
-
-</div>
 
 {% include footer.html %}
