@@ -1,6 +1,8 @@
----
-output:
-  html_document:
-    includes:
-       in_header: header.html
----
+# Where things are
+source:          .
+destination:     ./_site
+layouts_dir:     _layouts
+includes_dir:    _includes
+collections:
+  posts:
+    output:   true

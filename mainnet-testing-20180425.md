@@ -125,13 +125,13 @@ After hours of tinkering and fidgeting with variables, I was finally able to get
 
 ### Golem Network Providers in MacBook tasks
 The center-most dot in the network - the one with the lightest color - was locked in on every task. That doesn't mean that this node provided successful results or not though. As the dots get further away from the center of the spherical shape and the color gets darker, the fewer tasks that each particular node has been locked into as a provider for my requests.
-<iframe style="width:850px;height:850px;" src="golem-network-3d-20180425-macbook.html">
+<iframe style="width:850px;height:850px;" src="graphs/golem-network-3d-20180425-macbook.html">
 </iframe>
 <br>
 <br>
 ### Golem Network Providers in Ubuntu tasks
 The same explanation stands for this graph as well as explained above. The nodes that are closer to the edges of the sphere were less involved in my requests than the nodes closer to the center.
-<iframe style="width:850px;height:850px;" src="golem-network-3d-20180425-ubuntu.html">
+<iframe style="width:850px;height:850px;" src="graphs/golem-network-3d-20180425-ubuntu.html">
 </iframe>
 
 
