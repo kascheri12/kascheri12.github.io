@@ -9,7 +9,7 @@ title: Dashboard
 
 This is the eldest of the graphs that I've built to date; this is a summary of some standard network resources along with a basic node count. The three values for CPU Cores, Allowed Resource Memory, and Allowed Resource Size are found based on summing the corresponding values of the active nodes in a snapshot.
 
-<iframe style="width:100%;height:600px" src="graphs/golem-network.html"></iframe>
+<iframe style="width:100%;height:600px" src="{{ site.github.repository_url }}/graphs/golem-network.html"></iframe>
 
 
 ### Daily Aggregate Totals
@@ -34,7 +34,7 @@ Here's pseudo code for the functions:
 
 The reason that the average total completed subtasks on a given date is greater than the average requested subtasks is because this is only a snapshot in time of the nodes that are connected. A node that has completed subtasks for another might still be connected to the network while the requested has since left the network thereby removing that count from future snapshots while it is disconnected.
 
-<iframe style="width:100%;height:600px" src="graphs/daily_aggregate_totals_10_days.html"></iframe>
+<iframe style="width:100%;height:600px" src="{{ site.github.repository_url }}/graphs/daily_aggregate_totals_10_days.html"></iframe>
 
 
 ### Average Nodes Connected per Day
@@ -46,7 +46,7 @@ Pseudo code:
     * Find all_dist_timestamps_logged_on_date from all_nodes_logged_on_date
     * return len(all_nodes_logged_on_date) / len(all_timestamps_logged_on_date)
 
-<iframe style="width:100%;height:600px" src="graphs/daily_avg_nodes_connected_30_days.html"></iframe>
+<iframe style="width:100%;height:600px" src="{{ site.github.repository_url }}/graphs/daily_avg_nodes_connected_30_days.html"></iframe>
 
 
 ### New Unique Node Count per Snapshot
@@ -61,4 +61,4 @@ Pseudo code:
       * Find cnt_distinct_ts_for_new_nodes
       * avg_new_for_ts = len(new_nodes_this_ts) / cnt_distinct_ts_for_new_nodes
 
-<iframe style="width:100%;height:600px" src="graphs/summary_last_10_days.html"></iframe>
+<iframe style="width:100%;height:600px" src="{{ site.github.repository_url }}/graphs/summary_last_10_days.html"></iframe>
