@@ -69,4 +69,4 @@ Pseudo code:
       * Find cnt_distinct_ts_for_new_nodes
       * avg_new_for_ts = len(new_nodes_this_ts) / cnt_distinct_ts_for_new_nodes
 
-<iframe style="width:100%;height:600px" src="{{ base }}/{{ site.graphs_dir }}/summary_last_30_days.html"></iframe>
+<iframe style="width:100%;height:600px" src="{{ base }}/{{ site.graphs_dir }}/new_unique_node_count_per_snapshot.html"></iframe>
