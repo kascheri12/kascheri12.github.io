@@ -30,7 +30,7 @@ source:          .
 destination:     ./_site
 layouts_dir:     _layouts
 includes_dir:    _includes
-graphs_dir:      ./graphs
+graphs_dir:      graphs
 collections:
   posts:
     output:   true
