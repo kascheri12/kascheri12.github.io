@@ -7,7 +7,7 @@
 title: Kenny's Golem Links
 email: ""
 description: >- # this means to ignore newlines until "baseurl:"
-  A collection of links to assets contributed by the author
+  A collection of assets contributed by the author
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
@@ -21,7 +21,8 @@ plugins:
 
 # A list of the pages to display in the navigation bar
 header_pages:
-
+  - pages/Golem-Network-Dashboard.md
+  - pages/mainnet-testing-20180425.md
 
 # Where things are
 source:          .
