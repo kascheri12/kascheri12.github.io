@@ -1,5 +1,3 @@
-{% include header.html %}
-
 # Golem Network Dashboard
 
 
@@ -60,5 +58,3 @@ Pseudo code:
       * avg_new_for_ts = len(new_nodes_this_ts) / cnt_distinct_ts_for_new_nodes
 
 <iframe style="width:100%;height:600px" src="graphs/summary_last_10_days.html"></iframe>
-
-{% include footer.html %}
