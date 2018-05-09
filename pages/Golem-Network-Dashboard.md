@@ -34,7 +34,7 @@ Here's pseudo code for the functions:
 
 The reason that the average total completed subtasks on a given date is greater than the average requested subtasks is because this is only a snapshot in time of the nodes that are connected. A node that has completed subtasks for another might still be connected to the network while the requested has since left the network thereby removing that count from future snapshots while it is disconnected.
 
-<iframe style="width:100%;height:600px" src="{{ base }}/{{ site.graphs_dir }}/daily_aggregate_totals_10_days.html"></iframe>
+<iframe style="width:100%;height:600px" src="{{ base }}/{{ site.graphs_dir }}/daily_aggregate_totals_30_days.html"></iframe>
 
 
 ### Average Nodes Connected per Day
@@ -61,4 +61,4 @@ Pseudo code:
       * Find cnt_distinct_ts_for_new_nodes
       * avg_new_for_ts = len(new_nodes_this_ts) / cnt_distinct_ts_for_new_nodes
 
-<iframe style="width:100%;height:600px" src="{{ base }}/{{ site.graphs_dir }}/summary_last_10_days.html"></iframe>
+<iframe style="width:100%;height:600px" src="{{ base }}/{{ site.graphs_dir }}/summary_last_30_days.html"></iframe>
