@@ -23,6 +23,7 @@ plugins:
 header_pages:
   - pages/Golem-Network-Dashboard.md
   - pages/mainnet-testing-20180425.md
+  - pages/ubuntu_deployment.md
 
 # Where things are
 source:          .

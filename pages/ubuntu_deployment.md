@@ -1,3 +1,7 @@
+---
+title: Golem Ubuntu Deployment Instructions
+---
+
 # Installing, Running, and Testing Golem on Ubuntu 16.04
 
 ## Contents
