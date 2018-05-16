@@ -32,6 +32,8 @@ layouts_dir:     _layouts
 includes_dir:    _includes
 graphs_dir:      graphs
 images_dir:      images
+data_dir:        data
+javascript_dir:  assets/javascript
 collections:
   posts:
     output:   true
