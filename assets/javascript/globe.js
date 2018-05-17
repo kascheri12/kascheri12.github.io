@@ -16,7 +16,7 @@ const projection = d3.geoOrthographic()
 const path = d3.geoPath().projection(projection);
 const center = [width/2, height/2];
 const world_map_data_url = "https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba169207548a8a3d670c9c2cc719ff05c47/world-110m.json";
-const location_url = "https://kascheri12.github.io/data/201805160147_providor_node_data.json";
+const location_url = "https://kascheri12.github.io/data/201805162333_provider_node_data.json";
 
 drawGlobe();
 enableRotation();
@@ -67,7 +67,7 @@ function drawMarkers() {
           gdistance = d3.geoDistance(coordinate, projection.invert(center));
           return gdistance > 1.57 ? "none" : "steelblue";
       })
-      .attr("r", 3);
+      .attr("r", 5);
 
   markerGroup.each(function() {
       this.parentNode.appendChild(this);
