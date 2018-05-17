@@ -1,6 +1,6 @@
 const width = 800,
     height = 600,
-    speed = .005,
+    speed = .015,
     verticalTilt = -20,
     horizontalTilt = 0;
 let locations = [];
@@ -24,7 +24,7 @@ enableRotation();
 function drawGlobe() {
     d3.queue()
         .defer(d3.json, world_map_data_url)
-        .defer(d3.csv, location_url)
+        .defer(d3.json, location_url)
         .await((error, worldData, locationData) => {
             svg.append("path")
                 .datum({type: "Sphere"})
