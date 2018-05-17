@@ -60,10 +60,10 @@ function drawMarkers() {
       .enter()
       .append("circle")
       .merge(markers)
-      .attr("cx", d=> projection([float(d.longitude), float(d.latitude)])[0])
-      .attr("cy", d=> projection([float(d.longitude), float(d.latitude)])[1])
+      .attr("cx", d=> projection([parseFloat(d.longitude), parseFloat(d.latitude)])[0])
+      .attr("cy", d=> projection([parseFloat(d.longitude), parseFloat(d.latitude)])[1])
       .attr("fill", d=> {
-          const coordinate = [float(d.longitude), float(d.latitude)];
+          const coordinate = [parseFloat(d.longitude), parseFloat(d.latitude)];
           gdistance = d3.geoDistance(coordinate, projection.invert(center));
           return gdistance > 1.57 ? "none" : "steelblue";
       })
