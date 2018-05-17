@@ -3,7 +3,7 @@
 The graphs of providers that have computed subtasks per my node requests.
 
 <div class="row">
-  <div class="col-xs-12 globe-col"
+  <div class="col-xs-12 globe-col">
     <div class="globe"></div>
   </div>
 </div>
