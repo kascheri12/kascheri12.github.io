@@ -16,7 +16,7 @@ This is the eldest of the graphs that I've built to date; this is a summary of s
 
 <div id="Average-Daily-Subtasks-Totals"></div>
 
-### Average Daily Subtasks Totals
+### Average Daily Subtask Totals
 
 This is a new one I'm trying to put together and nail down. I'm trying to find the average values per day of snapshots of new unique nodes, subtasks requested, and subtasks computed on the date. Many nodes can come and go throughout the day so I thought that an average amongst the snapshots collected per day would work as a standard.
 
