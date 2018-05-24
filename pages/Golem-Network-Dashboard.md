@@ -9,7 +9,7 @@ title: Dashboard
 
 ### Golem Network Summary
 
-This is the eldest of the graphs that I've built to date; this is a summary of some standard network resources along with a basic active node count. The three values for CPU Cores, Allowed Resource Memory, and Allowed Resource Size are found based on summing the corresponding values of the active nodes in a snapshot.
+This is a summary of some standard resources along with a basic active node count. The three values for CPU Cores, Allowed Resource Memory, and Allowed Resource Size are found based on summing the corresponding values of the active nodes in a snapshot and dividing each by the number of snapshots.
 
 <iframe style="width:100%;height:600px" src="{{ base }}/{{ site.graphs_dir }}/golem-network.html"></iframe>
 
@@ -18,7 +18,7 @@ This is the eldest of the graphs that I've built to date; this is a summary of s
 
 ### Average Daily Subtask Totals
 
-This one shows the average values per day of snapshots of new unique nodes, subtasks requested, and subtasks computed on the date. Many nodes can come and go throughout the day so I thought that an average amongst the snapshots collected per day would work as a standard for my purposes.
+This one shows the average values per day of snapshots of new unique nodes, subtasks requested, and subtasks computed on the date. Many nodes can come and go throughout the day so I thought that an average amongst the snapshots collected per day would work as a standard daily metric for these graphs.
 
 The function that builds these values is [get_avg_daily_subtask_totals()](https://github.com/kascheri12/golem_util/blob/4b40695b16f120776a49613bf94678f732ef2b93/analyze_data.py#L701).
 
