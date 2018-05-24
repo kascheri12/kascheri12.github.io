@@ -9,7 +9,7 @@ title: Dashboard
 
 ### Golem Network Summary
 
-This is the eldest of the graphs that I've built to date; this is a summary of some standard network resources along with a basic node count. The three values for CPU Cores, Allowed Resource Memory, and Allowed Resource Size are found based on summing the corresponding values of the active nodes in a snapshot.
+This is the eldest of the graphs that I've built to date; this is a summary of some standard network resources along with a basic active node count. The three values for CPU Cores, Allowed Resource Memory, and Allowed Resource Size are found based on summing the corresponding values of the active nodes in a snapshot.
 
 <iframe style="width:100%;height:600px" src="{{ base }}/{{ site.graphs_dir }}/golem-network.html"></iframe>
 
@@ -18,7 +18,7 @@ This is the eldest of the graphs that I've built to date; this is a summary of s
 
 ### Average Daily Subtask Totals
 
-This is a new one I'm trying to put together and nail down. I'm trying to find the average values per day of snapshots of new unique nodes, subtasks requested, and subtasks computed on the date. Many nodes can come and go throughout the day so I thought that an average amongst the snapshots collected per day would work as a standard.
+This one shows the average values per day of snapshots of new unique nodes, subtasks requested, and subtasks computed on the date. Many nodes can come and go throughout the day so I thought that an average amongst the snapshots collected per day would work as a standard for my purposes.
 
 The function that builds these values is [get_avg_daily_subtask_totals()](https://github.com/kascheri12/golem_util/blob/4b40695b16f120776a49613bf94678f732ef2b93/analyze_data.py#L701).
 
@@ -44,9 +44,9 @@ The reason that the average total completed subtasks on a given date is greater 
 
 <div id="Average-Nodes-Connected-per-Day"></div>
 
-### Average Nodes Connected per Day
+### Average Active Nodes per Day
 
-This one is pretty straight-forward. 
+This one is pretty straight-forward. Snapshots only include active nodes, inactive node data is not being collected during a snapshot.
 
 Pseudo code:
   * [get_avg_nodes_connected_on_date(date)](https://github.com/kascheri12/golem_util/blob/4b40695b16f120776a49613bf94678f732ef2b93/analyze_data.py#L625)
@@ -75,7 +75,7 @@ Pseudo code:
 
 ### New Unique Node Count per Snapshot
 
-This one takes the longest to build because of the iterative nature of continuing to compare a growing list of values in the past that are not newly unique nodes anymore. This graph is not completely accurate since the node_id's being reviewed are only one's that have been logged in the data gathered here. 
+This one takes the longest to build because of the iterative nature of continuing to compare a growing list of values in the past that are not newly unique nodes anymore.
 
 Pseudo code:
   * [build_y_axis_dict_for_new_unique_over_last_days(x_axis)](https://github.com/kascheri12/golem_util/blob/4b40695b16f120776a49613bf94678f732ef2b93/analyze_data.py#L258)
