@@ -4,9 +4,9 @@ title: Dashboard
 
 # Golem Network Dashboard
 
-#### I've built this dashboard to help track and visualize some key factors that I think are worth watching on the golem network. I've been able to update the graphs every few days - if you appreciate this and would like to continue to see updates, please help out by showing your support.
+##### I've built this dashboard to help track and visualize some key factors that I think are worth watching on the golem network. I've been able to update the graphs every few days - if you appreciate this and would like to continue to see updates, please help out by showing your support.
 
-
+<br /><br />
 <div id="Golem-Network-Summary"></div>
 
 ### Golem Network Summary
