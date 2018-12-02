@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $(.top_dt).DataTable({
+  $('.top_dt').DataTable({
     scrollX: true,
     scrollY: 200
   });
