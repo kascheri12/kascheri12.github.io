@@ -4,7 +4,7 @@ $(document).ready(function() {
     scrollY: 600,
     searching: false,
     paging: false,
-    order: [[ 1, "desc" ]],
+    order: [[ 0, "desc" ]],
     bInfo: false
   });
 });
