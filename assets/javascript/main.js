@@ -5,7 +5,8 @@ $(document).ready(function() {
     searching: false,
     paging: false,
     order: [[ 0, "desc" ]],
-    bInfo: false
+    bInfo: false,
+    responsive: true
   });
 });
 $('.dataTables_length').addClass('bs-select');
