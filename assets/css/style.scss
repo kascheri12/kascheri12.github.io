@@ -16,7 +16,10 @@ header {
 max-width: 600px;
 margin: 0 auto;
 }
-#top_dt th, td {
+.top_dt th, td {
+white-space: nowrap;
+}
+.all_nodes_dt th, td {
 white-space: nowrap;
 }
 
