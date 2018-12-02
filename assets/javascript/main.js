@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $('.top_dt').DataTable({
-    scrollX: true,
+    scrollX: "100%",
     scrollY: 300,
     searching: false,
     paging: false,
@@ -8,7 +8,7 @@ $(document).ready(function() {
     bInfo: false
   });
   $('.all_nodes_dt').DataTable({
-    scrollX: true,
+    scrollX: "100%",
     scrollY: 500
   });
 });
