@@ -3,7 +3,9 @@ $(document).ready(function() {
     scrollX: true,
     scrollY: 600,
     searching: false,
-    paging: false
+    paging: false,
+    order: [[ 1, "desc" ]],
+    bInfo: false
   });
 });
 $('.dataTables_length').addClass('bs-select');
