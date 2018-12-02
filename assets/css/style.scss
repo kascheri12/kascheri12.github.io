@@ -18,6 +18,10 @@ white-space: nowrap;
 white-space: nowrap;
 }
 
+table.datatable th div.dataTables_sizing {
+    font-size: 12px;
+}
+
   table.dataTable thead>tr>td.sorting,
   table.dataTable thead>tr>td.sorting_asc,
   table.dataTable thead>tr>td.sorting_desc,
