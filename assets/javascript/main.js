@@ -4,9 +4,8 @@ $(document).ready(function() {
     scrollY: 300,
     searching: false,
     paging: false,
-    order: [[ 0, "desc" ]],
-    bInfo: false,
-    responsive: true
+    order: [[ 0, "desc" ],[ 3, "desc" ]],
+    bInfo: false
   });
 });
 $('.dataTables_length').addClass('bs-select');
