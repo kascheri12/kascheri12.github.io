@@ -30,6 +30,12 @@ $(document).ready(function() {
         strokeWidth: 0.035, // The thickness
         color: '#000000' // Fill color
       },
+      staticLabels: {
+        font: "20px sans-serif",  // Specifies font
+        labels: [-50,-30,-10,10,30,50],  // Print labels at these values
+        color: "#000000",  // Optional: Label text color
+        fractionDigits: 0  // Optional: Numerical precision. 0=round off.
+      },
       limitMax: false,     // If false, max value increases automatically if value > maxValue
       limitMin: false,     // If true, the min value of the gauge will be fixed
       colorStart: '#CF0E00',   // Colors
@@ -45,6 +51,7 @@ $(document).ready(function() {
     gauge.setMinValue(-50);  // Prefer setter over gauge.minValue = 0
     gauge.animationSpeed = 32; // set animation speed (32 is default value)
     gauge.set(pin_value); // set actual value
+    gauge.setTextField(document.getElementById('span_guage_percent_change_subtasks_success_past_day'),3);
   }
 });
 $('.dataTables_length').addClass('bs-select');
