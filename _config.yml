@@ -22,10 +22,8 @@ plugins:
 # A list of the pages to display in the navigation bar
 header_pages:
   - pages/Golem-Network-Dashboard.md
-  - pages/Providers-Globe.md
-  - pages/mainnet-testing-20180425.md
-  - pages/ubuntu_deployment.md
-
+  - pages/Archives.md
+  
 # Where things are
 source:          .
 destination:     ./_site
