@@ -1,5 +1,6 @@
 ---
 title: Archives
+permalink: /archives/
 ---
 
 # Archived Pages
