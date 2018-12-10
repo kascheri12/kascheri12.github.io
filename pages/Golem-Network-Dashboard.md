@@ -1,4 +1,5 @@
 ---
+layout: maintenance
 title: Dashboard
 ---
 
