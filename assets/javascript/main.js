@@ -37,5 +37,5 @@ $(document).ready(function() {
     lengthMenu: [[25, 100, -1], [25, 100, "All"]]
   });
   $('.dataTables_length').addClass('bs-select');
-  $('#iframe_global_network_data_history').attr('src',window.location.origin+'/graphs/global_network_data_history.html');
+  $('#iframe_global_network_data_history').attr('src',window.location.origin+'/graphs/global_network_data_history');
 });
