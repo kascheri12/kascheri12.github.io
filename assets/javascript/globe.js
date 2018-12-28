@@ -1,12 +1,13 @@
 const width = 800,
     height = 600,
-    speed = .010,
     verticalTilt = -20,
     horizontalTilt = 0;
+var speed = .015;
 let locations = [];
 const svg = d3.select(".globe").append("svg")
     .attr("width",width)
-    .attr("height",height);
+    .attr("height",height)
+    .attr("style","margin-left:-100px;");
 const markerGroup = svg.append("g");
 
 const projection = d3.geoOrthographic()
@@ -16,7 +17,7 @@ const projection = d3.geoOrthographic()
 const path = d3.geoPath().projection(projection);
 const center = [width/2, height/2];
 const world_map_data_url = "https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba169207548a8a3d670c9c2cc719ff05c47/world-110m.json";
-const location_url = "https://kascheri12.github.io/data/201805160147_provider_node_data.json";
+const location_url = window.location.origin + "/data/network_data.json";
 
 drawGlobe();
 enableRotation();
@@ -53,6 +54,12 @@ function enableRotation() {
     });
 }
 
+// Events for sliders and button
+document.getElementById("rotation").addEventListener("change", function() {
+   var new_speed = this.value;
+   speed = new_speed
+});
+
 function drawMarkers() {
   const markers = markerGroup.selectAll("circle")
       .data(locations)
@@ -65,9 +72,9 @@ function drawMarkers() {
       .attr("fill", d=> {
           const coordinate = [parseFloat(d.longitude), parseFloat(d.latitude)];
           gdistance = d3.geoDistance(coordinate, projection.invert(center));
-          return gdistance > 1.57 ? "none" : "steelblue";
+          return gdistance > 1.57 ? "none" : "white";
       })
-      .attr("r", d=> d.count_of_occurances * 3);
+      .attr("r", d=> d.size * 1);
 
   markerGroup.each(function() {
       this.parentNode.appendChild(this);
