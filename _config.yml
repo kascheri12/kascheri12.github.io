@@ -21,7 +21,8 @@ plugins:
 
 # A list of the pages to display in the navigation bar
 header_pages:
-  - pages/Golem-Network-Dashboard.md
+  - pages/Dashboard.md
+  - pages/Globe.md
   - pages/Archives.md
   
 # Where things are
