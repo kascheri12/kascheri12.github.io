@@ -108,21 +108,21 @@ $(document).ready(function() {
   gauge1.maxValue = 50; // set max gauge value
   gauge1.setMinValue(-50);  // Prefer setter over gauge.minValue = 0
   gauge1.animationSpeed = 10; // set animation speed (32 is default value)
-  gauge1.set(-4.4900); // set actual value
+  gauge1.set(12.0032); // set actual value
   gauge1.setTextField(document.getElementById('span_gauge_percent_change_subtasks_success_past_day'),3);
   
   var gauge2 = new Gauge(target2).setOptions(opts2); // create sexy gauge!
   gauge2.maxValue = 50; // set max gauge value
   gauge2.setMinValue(-50);  // Prefer setter over gauge.minValue = 0
   gauge2.animationSpeed = 10; // set animation speed (32 is default value)
-  gauge2.set(-5.4429); // set actual value
+  gauge2.set(1.7552); // set actual value
   gauge2.setTextField(document.getElementById('span_gauge_percent_change_subtasks_timeout_past_day'),3);
   
   var gauge3 = new Gauge(target3).setOptions(opts3); // create sexy gauge!
   gauge3.maxValue = 50; // set max gauge value
   gauge3.setMinValue(-50);  // Prefer setter over gauge.minValue = 0
   gauge3.animationSpeed = 10; // set animation speed (32 is default value)
-  gauge3.set(-6.8924); // set actual value
+  gauge3.set(23.2737); // set actual value
   gauge3.setTextField(document.getElementById('span_gauge_percent_change_subtasks_error_past_day'),3);
 });
 
@@ -140,7 +140,8 @@ $(document).ready(function() {
       <tr><th scope='col'>snapshot_date</th><th scope='col'>sum_subtasks_success</th><th scope='col'>percent_increase_prev_day_subtask_success</th><th scope='col'>sum_subtasks_timeout</th><th scope='col'>percent_increase_prev_day_subtask_timeout</th><th scope='col'>sum_subtasks_error</th><th scope='col'>percent_increase_prev_day_subtask_error</th></tr>
     </thead>
     <tbody>
-      <tr><td scope='row'>2019-09-13</td><td>164833</td><td>-4.4900</td><td>6619</td><td>-5.4429</td><td>3080</td><td>-6.8924</td></tr>
+      <tr><td scope='row'>2019-09-14</td><td>176740</td><td>12.0032</td><td>6551</td><td>1.7552</td><td>3517</td><td>23.2737</td></tr>
+<tr><td>2019-09-13</td><td>157799</td><td>-8.5658</td><td>6438</td><td>-8.0286</td><td>2853</td><td>-13.7545</td></tr>
 <tr><td>2019-09-12</td><td>172582</td><td>0.3360</td><td>7000</td><td>1.9814</td><td>3308</td><td>7.8930</td></tr>
 <tr><td>2019-09-11</td><td>172004</td><td>-5.9846</td><td>6864</td><td>-3.3103</td><td>3066</td><td>-10.7683</td></tr>
 <tr><td>2019-09-10</td><td>182953</td><td>-0.7179</td><td>7099</td><td>3.3484</td><td>3436</td><td>-0.6936</td></tr>
@@ -159,7 +160,6 @@ $(document).ready(function() {
 <tr><td>2019-08-28</td><td>176575</td><td>6.7802</td><td>6569</td><td>-3.4397</td><td>2573</td><td>18.0275</td></tr>
 <tr><td>2019-08-27</td><td>165363</td><td>-0.6787</td><td>6803</td><td>3.1852</td><td>2180</td><td>-28.0291</td></tr>
 <tr><td>2019-08-26</td><td>166493</td><td>3.1025</td><td>6593</td><td>-2.2245</td><td>3029</td><td>11.7300</td></tr>
-<tr><td>2019-08-25</td><td>161483</td><td>0.6219</td><td>6743</td><td>3.5791</td><td>2711</td><td>-11.0856</td></tr>
 
     </tbody>
   </table>
@@ -172,55 +172,55 @@ $(document).ready(function() {
       <tr><th scope='col'>subtasks_success</th><th scope='col'>node_name</th><th scope='col'>short_node_id</th><th scope='col'>snapshot_date</th><th scope='col'>cpu_cores</th><th scope='col'>allowed_resource_size</th><th scope='col'>allowed_resource_memory</th></tr>
     </thead>
     <tbody>
-      <tr><td scope='row'>6735</td><td>Node-ByZohaib</td><td>eb4732ff31</td><td>2019-09-13 16:17:02</td><td>14</td><td>3432012.0</td><td>12279022.0</td></tr>
-<tr><td>6422</td><td>Liesse</td><td>d28760e78d</td><td>2019-09-13 16:17:02</td><td>14</td><td>35386288.0</td><td>5452594.0</td></tr>
-<tr><td>5868</td><td>coduyen</td><td>3bf155f147</td><td>2019-09-13 16:17:02</td><td>11</td><td>79122628.0</td><td>36700160.0</td></tr>
+      <tr><td scope='row'>6759</td><td>Node-ByZohaib</td><td>eb4732ff31</td><td>2019-09-14 16:17:02</td><td>14</td><td>3432012.0</td><td>12279022.0</td></tr>
+<tr><td>6450</td><td>Liesse</td><td>d28760e78d</td><td>2019-09-14 16:17:02</td><td>14</td><td>35386288.0</td><td>5452594.0</td></tr>
+<tr><td>5868</td><td>coduyen</td><td>3bf155f147</td><td>2019-09-14 16:17:02</td><td>11</td><td>79122628.0</td><td>36700160.0</td></tr>
 <tr><td>5838</td><td>vuSa8Ri</td><td>da7980a71a</td><td>2019-09-13 04:42:02</td><td>7</td><td>80551652.0</td><td>24538578.0</td></tr>
-<tr><td>5359</td><td>Zootopia</td><td>87f1bdc964</td><td>2019-09-13 16:17:02</td><td>27</td><td>60453040.0</td><td>12313982.0</td></tr>
-<tr><td>4685</td><td>BoSox9</td><td>24eb4e2c1f</td><td>2019-09-13 16:17:02</td><td>14</td><td>10485760.0</td><td>17825792.0</td></tr>
-<tr><td>4545</td><td>obad-hai</td><td>dc6942cfa6</td><td>2019-09-13 16:17:02</td><td>7</td><td>1048576.0</td><td>6130620.0</td></tr>
+<tr><td>5359</td><td>Zootopia</td><td>87f1bdc964</td><td>2019-09-14 16:17:02</td><td>27</td><td>60453040.0</td><td>12313982.0</td></tr>
+<tr><td>4685</td><td>BoSox9</td><td>24eb4e2c1f</td><td>2019-09-14 16:17:02</td><td>14</td><td>10485760.0</td><td>17825792.0</td></tr>
+<tr><td>4557</td><td>obad-hai</td><td>dc6942cfa6</td><td>2019-09-14 16:17:02</td><td>7</td><td>1048576.0</td><td>6130620.0</td></tr>
+<tr><td>4537</td><td>The Bonejack</td><td>dac26852e2</td><td>2019-09-14 16:17:02</td><td>13</td><td>107269324.0</td><td>20971520.0</td></tr>
 <tr><td>4524</td><td>mainich1</td><td>08dfebdc9c</td><td>2019-08-05 06:02:02</td><td>10</td><td>16777216.0</td><td>21810380.0</td></tr>
-<tr><td>4520</td><td>The Bonejack</td><td>dac26852e2</td><td>2019-09-13 16:17:02</td><td>13</td><td>107269324.0</td><td>20971520.0</td></tr>
-<tr><td>4494</td><td>spliffstar-macos</td><td>5015bfd932</td><td>2019-09-13 16:17:02</td><td>3</td><td>359993356.0</td><td>9437184.0</td></tr>
-<tr><td>4065</td><td>tiger-zoo</td><td>258ab76a7c</td><td>2019-09-13 16:17:02</td><td>27</td><td>14372576.0</td><td>9219510.0</td></tr>
-<tr><td>4004</td><td>W0RSCHD</td><td>e977f6866f</td><td>2019-09-13 16:17:02</td><td>4</td><td>53057945.0</td><td>10485760.0</td></tr>
+<tr><td>4513</td><td>spliffstar-macos</td><td>5015bfd932</td><td>2019-09-14 16:17:02</td><td>3</td><td>358863688.0</td><td>9437184.0</td></tr>
+<tr><td>4088</td><td>tiger-zoo</td><td>258ab76a7c</td><td>2019-09-14 16:17:02</td><td>27</td><td>14372576.0</td><td>9219510.0</td></tr>
+<tr><td>4004</td><td>W0RSCHD</td><td>e977f6866f</td><td>2019-09-14 16:17:02</td><td>4</td><td>53057945.0</td><td>10485760.0</td></tr>
 <tr><td>3938</td><td>Pacifica02_b</td><td>3bf599d6d3</td><td>2019-08-29 09:12:02</td><td>11</td><td>160432128.0</td><td>16777216.0</td></tr>
-<tr><td>3853</td><td>fuchur2</td><td>312d46498d</td><td>2019-09-04 23:27:02</td><td>13</td><td>1058118041.0</td><td>21951638.0</td></tr>
-<tr><td>3690</td><td>Procrastinator</td><td>719a719bcc</td><td>2019-09-11 09:27:02</td><td>26</td><td>74029465.0</td><td>10485760.0</td></tr>
-<tr><td>3582</td><td>GoodJobBestPrice</td><td>bfced6f558</td><td>2019-09-13 16:17:02</td><td>3</td><td>16666684.0</td><td>4560174.0</td></tr>
-<tr><td>3561</td><td>The_Bras_Node</td><td>873bd46534</td><td>2019-09-13 16:17:02</td><td>4</td><td>9895316.0</td><td>11668068.0</td></tr>
-<tr><td>3486</td><td>MS-7B34</td><td>683b230386</td><td>2019-09-13 16:17:02</td><td>5</td><td>259627417.0</td><td>29884416.0</td></tr>
-<tr><td>3471</td><td>(Anonymous)</td><td>d843dfd5a8</td><td>2019-09-13 16:17:02</td><td>7</td><td>119353816.0</td><td>11058252.0</td></tr>
-<tr><td>3431</td><td>macgyver</td><td>4e92f89baa</td><td>2019-09-13 16:17:02</td><td>9</td><td>26214400.0</td><td>9437184.0</td></tr>
-<tr><td>3353</td><td>textletter</td><td>5f21cd5b25</td><td>2019-09-13 16:17:02</td><td>20</td><td>421632409.0</td><td>73924608.0</td></tr>
-<tr><td>3269</td><td>GamingPC</td><td>7e6a3047b6</td><td>2019-09-13 09:12:02</td><td>11</td><td>16777216.0</td><td>12582912.0</td></tr>
+<tr><td>3858</td><td>fuchur2</td><td>312d46498d</td><td>2019-09-14 09:17:02</td><td>13</td><td>1058118041.0</td><td>21951638.0</td></tr>
+<tr><td>3690</td><td>Procrastinator</td><td>719a719bcc</td><td>2019-09-14 11:42:02</td><td>26</td><td>74029465.0</td><td>10485760.0</td></tr>
+<tr><td>3602</td><td>GoodJobBestPrice</td><td>bfced6f558</td><td>2019-09-14 16:17:02</td><td>3</td><td>16666684.0</td><td>4560174.0</td></tr>
+<tr><td>3563</td><td>The_Bras_Node</td><td>873bd46534</td><td>2019-09-13 19:47:02</td><td>4</td><td>9895316.0</td><td>11668068.0</td></tr>
+<tr><td>3493</td><td>(Anonymous)</td><td>d843dfd5a8</td><td>2019-09-14 16:17:02</td><td>7</td><td>119353816.0</td><td>11058252.0</td></tr>
+<tr><td>3488</td><td>MS-7B34</td><td>683b230386</td><td>2019-09-14 16:17:02</td><td>4</td><td>223346688.0</td><td>16986930.0</td></tr>
+<tr><td>3431</td><td>macgyver</td><td>4e92f89baa</td><td>2019-09-14 16:17:02</td><td>9</td><td>26214400.0</td><td>9437184.0</td></tr>
+<tr><td>3353</td><td>textletter</td><td>5f21cd5b25</td><td>2019-09-14 16:17:02</td><td>20</td><td>421632409.0</td><td>73924608.0</td></tr>
+<tr><td>3269</td><td>GamingPC</td><td>7e6a3047b6</td><td>2019-09-13 20:42:02</td><td>11</td><td>16777216.0</td><td>12582912.0</td></tr>
+<tr><td>3252</td><td>DonsDell</td><td>bfbd973bfd</td><td>2019-09-14 16:17:02</td><td>5</td><td>658529094.0</td><td>14120542.0</td></tr>
 <tr><td>3247</td><td>Tobi Voos</td><td>f4ae245446</td><td>2019-09-11 15:22:02</td><td>5</td><td>134817994.0</td><td>10500140.0</td></tr>
-<tr><td>3242</td><td>DonsDell</td><td>bfbd973bfd</td><td>2019-09-13 05:52:02</td><td>5</td><td>658529094.0</td><td>14120542.0</td></tr>
 <tr><td>3219</td><td>plumbus</td><td>611f591f51</td><td>2019-09-11 02:27:02</td><td>6</td><td>52428800.0</td><td>8388608.0</td></tr>
-<tr><td>3202</td><td>abcdefyyy</td><td>f57cfbf9b3</td><td>2019-09-13 16:17:02</td><td>3</td><td>11534336.0</td><td>4194304.0</td></tr>
+<tr><td>3209</td><td>abcdefyyy</td><td>f57cfbf9b3</td><td>2019-09-14 16:17:02</td><td>3</td><td>11534336.0</td><td>4194304.0</td></tr>
+<tr><td>3153</td><td>xeqres</td><td>c01a28b851</td><td>2019-09-14 16:17:02</td><td>3</td><td>1048576.0</td><td>5242880.0</td></tr>
 <tr><td>3141</td><td>cryptodave</td><td>dc068d492b</td><td>2019-08-25 15:07:02</td><td>9</td><td>18835832.0</td><td>10485760.0</td></tr>
-<tr><td>3136</td><td>xeqres</td><td>c01a28b851</td><td>2019-09-13 16:17:02</td><td>3</td><td>1048576.0</td><td>5242880.0</td></tr>
 <tr><td>3059</td><td>Pro Grade</td><td>3258c0b410</td><td>2019-08-19 10:27:02</td><td>11</td><td>118595484.0</td><td>10485760.0</td></tr>
 <tr><td>3014</td><td>Fuzzy Golem</td><td>06af924c46</td><td>2019-09-07 09:17:02</td><td>5</td><td>60648864.0</td><td>20971520.0</td></tr>
 <tr><td>2955</td><td>l3t0l</td><td>9d4bdceb2c</td><td>2019-09-12 07:02:02</td><td>4</td><td>52638515.0</td><td>8388608.0</td></tr>
 <tr><td>2815</td><td>mano</td><td>35f5ecd5d4</td><td>2019-07-01 10:42:02</td><td>7</td><td>47862440.0</td><td>20971520.0</td></tr>
-<tr><td>2788</td><td>whodunnit</td><td>fbd13c89e0</td><td>2019-09-13 15:57:02</td><td>5</td><td>262144000.0</td><td>8388608.0</td></tr>
+<tr><td>2804</td><td>whodunnit</td><td>fbd13c89e0</td><td>2019-09-14 16:17:02</td><td>5</td><td>262144000.0</td><td>8388608.0</td></tr>
 <tr><td>2676</td><td>KOW4G02</td><td>fefade7675</td><td>2019-08-26 16:02:02</td><td>10</td><td>52533657.0</td><td>50331648.0</td></tr>
-<tr><td>2635</td><td>maco-nodey-1</td><td>51b78ede71</td><td>2019-09-13 16:17:02</td><td>7</td><td>559210264.0</td><td>12582912.0</td></tr>
-<tr><td>2580</td><td>ciumete</td><td>8283860bb8</td><td>2019-09-13 11:47:02</td><td>6</td><td>8104560.0</td><td>33554432.0</td></tr>
-<tr><td>2580</td><td>lalotai</td><td>70585dfaa0</td><td>2019-09-13 16:17:02</td><td>11</td><td>240450620.0</td><td>24641536.0</td></tr>
+<tr><td>2655</td><td>maco-nodey-1</td><td>51b78ede71</td><td>2019-09-14 16:17:02</td><td>7</td><td>559210264.0</td><td>12582912.0</td></tr>
+<tr><td>2591</td><td>ciumete</td><td>8283860bb8</td><td>2019-09-14 16:17:02</td><td>6</td><td>4286852.0</td><td>33554432.0</td></tr>
+<tr><td>2580</td><td>lalotai</td><td>70585dfaa0</td><td>2019-09-14 16:17:02</td><td>11</td><td>240450620.0</td><td>24641536.0</td></tr>
 <tr><td>2541</td><td>Xurce</td><td>88b7696013</td><td>2019-09-09 00:17:02</td><td>8</td><td>19922944.0</td><td>10485760.0</td></tr>
-<tr><td>2498</td><td>Pacifica01</td><td>157f3260a4</td><td>2019-09-13 16:17:02</td><td>2</td><td>8388608.0</td><td>4718592.0</td></tr>
-<tr><td>2468</td><td>M1</td><td>55ebf62911</td><td>2019-09-13 03:57:02</td><td>14</td><td>10695475.0</td><td>16777216.0</td></tr>
-<tr><td>2406</td><td>DuttyNode</td><td>6d1649c4e8</td><td>2019-09-13 16:17:02</td><td>4</td><td>38385984.0</td><td>7340032.0</td></tr>
+<tr><td>2514</td><td>Pacifica01</td><td>157f3260a4</td><td>2019-09-14 16:17:02</td><td>2</td><td>8388608.0</td><td>4718592.0</td></tr>
+<tr><td>2481</td><td>M1</td><td>55ebf62911</td><td>2019-09-14 16:17:02</td><td>14</td><td>10695475.0</td><td>16777216.0</td></tr>
+<tr><td>2430</td><td>DuttyNode</td><td>6d1649c4e8</td><td>2019-09-14 16:17:02</td><td>4</td><td>38385984.0</td><td>7340032.0</td></tr>
 <tr><td>2402</td><td>Bakerlife14</td><td>c55324ec85</td><td>2019-08-09 01:42:02</td><td>14</td><td>214958080.0</td><td>41838182.0</td></tr>
 <tr><td>2391</td><td>Vicente</td><td>0d3c417e55</td><td>2019-08-05 07:37:02</td><td>6</td><td>422451148.0</td><td>11219762.0</td></tr>
-<tr><td>2366</td><td>kenadian</td><td>9e36e4be75</td><td>2019-09-13 16:17:02</td><td>3</td><td>260863744.0</td><td>25165824.0</td></tr>
-<tr><td>2305</td><td>Shedhead</td><td>c39c51a5b7</td><td>2019-09-13 16:17:02</td><td>5</td><td>3145728.0</td><td>6291456.0</td></tr>
+<tr><td>2373</td><td>kenadian</td><td>9e36e4be75</td><td>2019-09-14 16:17:02</td><td>3</td><td>260863744.0</td><td>25165824.0</td></tr>
+<tr><td>2325</td><td>Shedhead</td><td>c39c51a5b7</td><td>2019-09-14 16:17:02</td><td>5</td><td>3145728.0</td><td>6291456.0</td></tr>
 <tr><td>2295</td><td>BlackTower</td><td>f300a23897</td><td>2019-06-25 12:12:02</td><td>6</td><td>6016128.0</td><td>22606970.0</td></tr>
-<tr><td>2276</td><td>lordvader</td><td>eab55fea11</td><td>2019-09-13 16:17:02</td><td>3</td><td>104857600.0</td><td>5242880.0</td></tr>
-<tr><td>2230</td><td>RentMyBestCPU</td><td>7c4991a1c8</td><td>2019-09-13 16:17:02</td><td>3</td><td>18990868.0</td><td>3029762.0</td></tr>
-<tr><td>2136</td><td>oncoming storm</td><td>6c15fa96c1</td><td>2019-09-13 16:17:02</td><td>3</td><td>2267484.0</td><td>12227034.0</td></tr>
+<tr><td>2290</td><td>lordvader</td><td>eab55fea11</td><td>2019-09-14 16:17:02</td><td>3</td><td>104857600.0</td><td>5242880.0</td></tr>
+<tr><td>2240</td><td>RentMyBestCPU</td><td>7c4991a1c8</td><td>2019-09-14 16:17:02</td><td>3</td><td>17756844.0</td><td>3029762.0</td></tr>
+<tr><td>2136</td><td>oncoming storm</td><td>6c15fa96c1</td><td>2019-09-14 16:17:02</td><td>3</td><td>2267484.0</td><td>12227034.0</td></tr>
 
     </tbody>
   </table>
@@ -235,14 +235,14 @@ $(document).ready(function() {
     <tbody>
       <tr><td scope='row'>932</td><td>Fuzzy Golem</td><td>06af924c46</td><td>2019-09-07 09:17:02</td><td>5</td><td>60648864.0</td><td>20971520.0</td></tr>
 <tr><td>730</td><td>Skippa-golem</td><td>78d7d62331</td><td>2019-07-21 18:47:02</td><td>7</td><td>1048576.0</td><td>6122186.0</td></tr>
-<tr><td>476</td><td>DedoGolem</td><td>364fd5af24</td><td>2019-09-13 16:17:02</td><td>22</td><td>3879731.0</td><td>16777216.0</td></tr>
+<tr><td>476</td><td>DedoGolem</td><td>364fd5af24</td><td>2019-09-14 16:17:02</td><td>22</td><td>3879731.0</td><td>16777216.0</td></tr>
 <tr><td>452</td><td>GolemMultiCore</td><td>735abafcb3</td><td>2019-04-22 15:13:53</td><td>12</td><td>31562137.0</td><td>6291456.0</td></tr>
 <tr><td>416</td><td>olexiyb</td><td>89cc383411</td><td>2019-09-03 21:32:02</td><td>2</td><td>6291456.0</td><td>18827318.0</td></tr>
 <tr><td>386</td><td>plumbus</td><td>611f591f51</td><td>2019-09-11 02:27:02</td><td>6</td><td>52428800.0</td><td>8388608.0</td></tr>
 <tr><td>364</td><td>cryptodave</td><td>dc068d492b</td><td>2019-08-25 15:07:02</td><td>9</td><td>18835832.0</td><td>10485760.0</td></tr>
 <tr><td>313</td><td>MaccyD1</td><td>deb4a9c8f0</td><td>2019-05-14 19:43:53</td><td>6</td><td>14026792.0</td><td>5242880.0</td></tr>
-<tr><td>292</td><td>The Bonejack</td><td>dac26852e2</td><td>2019-09-13 16:17:02</td><td>13</td><td>107269324.0</td><td>20971520.0</td></tr>
-<tr><td>269</td><td>MMX99</td><td>6d24d6189a</td><td>2019-09-13 10:47:02</td><td>10</td><td>62914560.0</td><td>10485760.0</td></tr>
+<tr><td>292</td><td>The Bonejack</td><td>dac26852e2</td><td>2019-09-14 16:17:02</td><td>13</td><td>107269324.0</td><td>20971520.0</td></tr>
+<tr><td>269</td><td>MMX99</td><td>6d24d6189a</td><td>2019-09-14 16:17:02</td><td>10</td><td>62914560.0</td><td>10485760.0</td></tr>
 <tr><td>264</td><td>samthegolem</td><td>bdb78989b1</td><td>2019-08-18 22:17:02</td><td>3</td><td>313067428.0</td><td>10485760.0</td></tr>
 <tr><td>235</td><td>Fat80y 3</td><td>bcc87a9746</td><td>2019-05-11 00:58:53</td><td>3</td><td>21468996.0</td><td>9382164.0</td></tr>
 <tr><td>214</td><td>123</td><td>437316f010</td><td>2019-06-20 13:47:02</td><td>2</td><td>96064104.0</td><td>10649904.0</td></tr>
@@ -251,38 +251,38 @@ $(document).ready(function() {
 <tr><td>167</td><td>DK24</td><td>b2483f1942</td><td>2019-02-22 20:37:15</td><td>3</td><td>104857600.0</td><td>5242880.0</td></tr>
 <tr><td>162</td><td>mig-eth</td><td>867f600af6</td><td>2019-09-08 05:12:02</td><td>3</td><td>28553660.0</td><td>12348020.0</td></tr>
 <tr><td>158</td><td>Xurce</td><td>88b7696013</td><td>2019-09-09 00:17:02</td><td>8</td><td>19922944.0</td><td>10485760.0</td></tr>
-<tr><td>149</td><td>BoSox9</td><td>24eb4e2c1f</td><td>2019-09-13 16:17:02</td><td>14</td><td>10485760.0</td><td>17825792.0</td></tr>
+<tr><td>149</td><td>BoSox9</td><td>24eb4e2c1f</td><td>2019-09-14 16:17:02</td><td>14</td><td>10485760.0</td><td>17825792.0</td></tr>
 <tr><td>146</td><td>orgWasm</td><td>b4d6421943</td><td>2019-09-07 17:47:02</td><td>7</td><td>314572800.0</td><td>12582912.0</td></tr>
-<tr><td>145</td><td>hood</td><td>225c4925b5</td><td>2019-09-13 16:17:02</td><td>11</td><td>1048576.0</td><td>49476062.0</td></tr>
+<tr><td>145</td><td>hood</td><td>225c4925b5</td><td>2019-09-14 16:17:02</td><td>11</td><td>1048576.0</td><td>49476062.0</td></tr>
 <tr><td>144</td><td>Sivir</td><td>f61c8405ba</td><td>2019-08-10 17:32:02</td><td>3</td><td>1048576.0</td><td>9397436.0</td></tr>
-<tr><td>143</td><td>Shedhead</td><td>c39c51a5b7</td><td>2019-09-13 16:17:02</td><td>5</td><td>3145728.0</td><td>6291456.0</td></tr>
-<tr><td>141</td><td>abcdefyyy</td><td>f57cfbf9b3</td><td>2019-09-13 16:17:02</td><td>3</td><td>11534336.0</td><td>4194304.0</td></tr>
+<tr><td>144</td><td>Shedhead</td><td>c39c51a5b7</td><td>2019-09-14 16:17:02</td><td>5</td><td>3145728.0</td><td>6291456.0</td></tr>
+<tr><td>142</td><td>abcdefyyy</td><td>f57cfbf9b3</td><td>2019-09-14 16:17:02</td><td>3</td><td>11534336.0</td><td>4194304.0</td></tr>
 <tr><td>140</td><td>EyeIsBoss</td><td>6bbeb79e20</td><td>2019-07-09 14:42:02</td><td>7</td><td>627685696.0</td><td>25137618.0</td></tr>
 <tr><td>138</td><td>Vicente</td><td>0d3c417e55</td><td>2019-08-05 07:37:02</td><td>6</td><td>422451148.0</td><td>11219762.0</td></tr>
 <tr><td>129</td><td>GolemNerd-GPU</td><td>879093baed</td><td>2019-04-30 23:48:53</td><td>1</td><td>1048576.0</td><td>5887620.0</td></tr>
-<tr><td>125</td><td>eggsparkle2</td><td>ad2a22cfc2</td><td>2019-09-13 16:17:02</td><td>7</td><td>20481512.0</td><td>12494480.0</td></tr>
+<tr><td>125</td><td>eggsparkle2</td><td>ad2a22cfc2</td><td>2019-09-14 16:17:02</td><td>7</td><td>20481512.0</td><td>12494480.0</td></tr>
 <tr><td>124</td><td>Nexus</td><td>a3564f7685</td><td>2019-08-08 11:17:02</td><td>7</td><td>31457280.0</td><td>10485760.0</td></tr>
-<tr><td>123</td><td>Tordek</td><td>c2dc8f5cc4</td><td>2019-09-13 16:17:02</td><td>3</td><td>85357288.0</td><td>3071204.0</td></tr>
-<tr><td>120</td><td>MS-7B34</td><td>683b230386</td><td>2019-09-13 16:17:02</td><td>5</td><td>259627417.0</td><td>29884416.0</td></tr>
+<tr><td>123</td><td>Tordek</td><td>c2dc8f5cc4</td><td>2019-09-14 16:17:02</td><td>3</td><td>85357288.0</td><td>3071204.0</td></tr>
+<tr><td>121</td><td>MS-7B34</td><td>683b230386</td><td>2019-09-14 16:17:02</td><td>4</td><td>223346688.0</td><td>16986930.0</td></tr>
 <tr><td>115</td><td>mine</td><td>d4545af398</td><td>2019-05-22 15:08:53</td><td>7</td><td>1048576.0</td><td>9290799.0</td></tr>
 <tr><td>114</td><td>Katznode</td><td>b4fdf00b27</td><td>2019-01-05 02:57:15</td><td>5</td><td>13408537.0</td><td>4951305.0</td></tr>
 <tr><td>111</td><td>FrankinStineNode</td><td>c867218fae</td><td>2019-03-01 19:33:53</td><td>2</td><td>119560982.0</td><td>4194304.0</td></tr>
 <tr><td>109</td><td>mrkmerc</td><td>2e00892ac8</td><td>2019-08-10 04:32:02</td><td>3</td><td>96502224.0</td><td>15627434.0</td></tr>
-<tr><td>106</td><td>Natgolem1</td><td>b9a06cad67</td><td>2019-09-12 08:32:02</td><td>3</td><td>13107200.0</td><td>6205260.0</td></tr>
+<tr><td>106</td><td>Natgolem1</td><td>b9a06cad67</td><td>2019-09-14 16:17:02</td><td>3</td><td>13107200.0</td><td>6205260.0</td></tr>
 <tr><td>100</td><td></td><td>0302f2a782</td><td>2019-07-24 14:02:02</td><td>4</td><td>2912620.0</td><td>7235174.0</td></tr>
 <tr><td>98</td><td>bloopd</td><td>fcab66f556</td><td>2019-07-12 22:27:02</td><td>2</td><td>2202009.0</td><td>5138022.0</td></tr>
 <tr><td>96</td><td>kohendri</td><td>055bdd085a</td><td>2019-04-07 11:53:53</td><td>2</td><td>43754810.0</td><td>4194304.0</td></tr>
 <tr><td>95</td><td>Flaci75</td><td>6d31161d92</td><td>2019-09-08 17:17:02</td><td>6</td><td>55155097.0</td><td>5138022.0</td></tr>
 <tr><td>94</td><td>Selivan74-sala</td><td>8667f2ddff</td><td>2019-06-20 03:32:02</td><td>2</td><td>32400998.0</td><td>6291456.0</td></tr>
-<tr><td>92</td><td>GolemDarkKnight</td><td>33e9149c9c</td><td>2019-09-13 16:17:02</td><td>3</td><td>305452588.0</td><td>6291456.0</td></tr>
+<tr><td>92</td><td>GolemDarkKnight</td><td>33e9149c9c</td><td>2019-09-14 16:17:02</td><td>3</td><td>305452588.0</td><td>6291456.0</td></tr>
 <tr><td>90</td><td>SydNet</td><td>18e36980d1</td><td>2019-08-06 17:02:02</td><td>6</td><td>9357820.0</td><td>8388608.0</td></tr>
-<tr><td>87</td><td>DuttyNode</td><td>6d1649c4e8</td><td>2019-09-13 16:17:02</td><td>4</td><td>38385984.0</td><td>7340032.0</td></tr>
+<tr><td>88</td><td>Durin2</td><td>b9340eeb6d</td><td>2019-09-14 16:17:02</td><td>3</td><td>52428800.0</td><td>12085938.0</td></tr>
+<tr><td>87</td><td>DuttyNode</td><td>6d1649c4e8</td><td>2019-09-14 16:17:02</td><td>4</td><td>38385984.0</td><td>7340032.0</td></tr>
 <tr><td>86</td><td>chrisloko</td><td>ccd652a0ac</td><td>2019-07-23 07:32:02</td><td>7</td><td>32400998.0</td><td>8388608.0</td></tr>
-<tr><td>86</td><td>Durin2</td><td>b9340eeb6d</td><td>2019-09-13 16:17:02</td><td>3</td><td>52428800.0</td><td>12085938.0</td></tr>
 <tr><td>83</td><td>FotG_</td><td>44865a8cb1</td><td>2019-07-09 23:17:02</td><td>8</td><td>111778201.0</td><td>25375538.0</td></tr>
-<tr><td>83</td><td>sparklenose</td><td>b76d24a6fd</td><td>2019-09-13 16:17:02</td><td>5</td><td>157286400.0</td><td>8388608.0</td></tr>
+<tr><td>83</td><td>sparklenose</td><td>b76d24a6fd</td><td>2019-09-14 16:17:02</td><td>5</td><td>157286400.0</td><td>8388608.0</td></tr>
+<tr><td>83</td><td>lordvader</td><td>eab55fea11</td><td>2019-09-14 16:17:02</td><td>3</td><td>104857600.0</td><td>5242880.0</td></tr>
 <tr><td>82</td><td>SerbianGolem</td><td>89f6577296</td><td>2019-04-11 13:58:53</td><td>11</td><td>200580766.0</td><td>8611536.0</td></tr>
-<tr><td>82</td><td>lordvader</td><td>eab55fea11</td><td>2019-09-13 16:17:02</td><td>3</td><td>104857600.0</td><td>5242880.0</td></tr>
 
     </tbody>
   </table>
@@ -296,23 +296,23 @@ $(document).ready(function() {
     </thead>
     <tbody>
       <tr><td scope='row'>502</td><td>DK1</td><td>bfba7469f4</td><td>2019-07-24 01:47:02</td><td>3</td><td>27907708.0</td><td>8912896.0</td></tr>
-<tr><td>387</td><td>DGRIGG1</td><td>9da4e2f04c</td><td>2019-09-13 16:17:02</td><td>1</td><td>82332840.0</td><td>6260730.0</td></tr>
-<tr><td>335</td><td>DiamondGolem</td><td>09fd5d0bd6</td><td>2019-09-13 02:22:02</td><td>1</td><td>21542999.0</td><td>9097968.0</td></tr>
+<tr><td>387</td><td>DGRIGG1</td><td>9da4e2f04c</td><td>2019-09-14 16:17:02</td><td>1</td><td>82332840.0</td><td>6260730.0</td></tr>
+<tr><td>340</td><td>DiamondGolem</td><td>09fd5d0bd6</td><td>2019-09-14 06:42:02</td><td>1</td><td>21542999.0</td><td>9097968.0</td></tr>
 <tr><td>294</td><td>aussiemark</td><td>de002b1df0</td><td>2019-08-11 01:02:02</td><td>3</td><td>177018776.0</td><td>6045042.0</td></tr>
-<tr><td>293</td><td>Random</td><td>3599f32da4</td><td>2019-09-13 16:17:02</td><td>7</td><td>683759596.0</td><td>12478054.0</td></tr>
-<tr><td>286</td><td>BitCryptic-Bal1</td><td>a731e91723</td><td>2019-09-13 16:17:02</td><td>1</td><td>1048576.0</td><td>5708594.0</td></tr>
+<tr><td>293</td><td>Random</td><td>3599f32da4</td><td>2019-09-13 19:27:02</td><td>7</td><td>683759596.0</td><td>12478054.0</td></tr>
+<tr><td>290</td><td>BitCryptic-Bal1</td><td>a731e91723</td><td>2019-09-14 16:17:02</td><td>1</td><td>1048576.0</td><td>5708594.0</td></tr>
 <tr><td>279</td><td>Marco V</td><td>0966aa3842</td><td>2019-08-29 10:07:02</td><td>3</td><td>638420348.0</td><td>6237810.0</td></tr>
-<tr><td>270</td><td>GM</td><td>f97856d3c2</td><td>2019-09-13 16:17:02</td><td>1</td><td>142178502.0</td><td>3145728.0</td></tr>
-<tr><td>233</td><td>superluis018</td><td>2cb753e34e</td><td>2019-09-13 16:17:02</td><td>4</td><td>106535321.0</td><td>9437184.0</td></tr>
-<tr><td>222</td><td>Tordek</td><td>c2dc8f5cc4</td><td>2019-09-13 16:17:02</td><td>3</td><td>85357288.0</td><td>3071204.0</td></tr>
+<tr><td>272</td><td>GM</td><td>f97856d3c2</td><td>2019-09-14 16:17:02</td><td>1</td><td>142178502.0</td><td>3145728.0</td></tr>
+<tr><td>233</td><td>superluis018</td><td>2cb753e34e</td><td>2019-09-14 16:17:02</td><td>4</td><td>106535321.0</td><td>9437184.0</td></tr>
+<tr><td>222</td><td>Tordek</td><td>c2dc8f5cc4</td><td>2019-09-14 16:17:02</td><td>3</td><td>85357288.0</td><td>3071204.0</td></tr>
 <tr><td>212</td><td>austinav1</td><td>c1b1592c16</td><td>2019-02-17 19:27:15</td><td>2</td><td>262144000.0</td><td>6291456.0</td></tr>
-<tr><td>200</td><td>Pacifica01</td><td>157f3260a4</td><td>2019-09-13 16:17:02</td><td>2</td><td>8388608.0</td><td>4718592.0</td></tr>
-<tr><td>191</td><td>lordvader</td><td>eab55fea11</td><td>2019-09-13 16:17:02</td><td>3</td><td>104857600.0</td><td>5242880.0</td></tr>
+<tr><td>201</td><td>Pacifica01</td><td>157f3260a4</td><td>2019-09-14 16:17:02</td><td>2</td><td>8388608.0</td><td>4718592.0</td></tr>
+<tr><td>191</td><td>lordvader</td><td>eab55fea11</td><td>2019-09-14 16:17:02</td><td>3</td><td>104857600.0</td><td>5242880.0</td></tr>
 <tr><td>190</td><td>London-essex</td><td>5034ff18ae</td><td>2019-09-08 13:32:02</td><td>3</td><td>285914264.0</td><td>6291456.0</td></tr>
 <tr><td>185</td><td>Lilaschwarz</td><td>5c141cff47</td><td>2019-08-05 11:37:02</td><td>5</td><td>125249170.0</td><td>12506264.0</td></tr>
 <tr><td>183</td><td>DK17</td><td>629439ff3a</td><td>2019-03-14 10:23:53</td><td>3</td><td>104857600.0</td><td>5242880.0</td></tr>
 <tr><td>183</td><td>Pro Grade</td><td>3258c0b410</td><td>2019-08-19 10:27:02</td><td>11</td><td>118595484.0</td><td>10485760.0</td></tr>
-<tr><td>181</td><td>abcdefyyy</td><td>f57cfbf9b3</td><td>2019-09-13 16:17:02</td><td>3</td><td>11534336.0</td><td>4194304.0</td></tr>
+<tr><td>181</td><td>abcdefyyy</td><td>f57cfbf9b3</td><td>2019-09-14 16:17:02</td><td>3</td><td>11534336.0</td><td>4194304.0</td></tr>
 <tr><td>168</td><td></td><td>47c0a89a0a</td><td>2019-09-07 22:37:02</td><td>7</td><td>98064068.0</td><td>12519254.0</td></tr>
 <tr><td>159</td><td>waffledonkey2003</td><td>be7e5eec73</td><td>2019-04-19 18:08:53</td><td>12</td><td>57671680.0</td><td>10485760.0</td></tr>
 <tr><td>157</td><td>Dinkum</td><td>b7597b678c</td><td>2019-08-18 03:22:02</td><td>3</td><td>1338102.0</td><td>6252360.0</td></tr>
@@ -320,30 +320,30 @@ $(document).ready(function() {
 <tr><td>156</td><td>DK22</td><td>f5785c737f</td><td>2019-02-22 21:42:15</td><td>3</td><td>104857600.0</td><td>5242880.0</td></tr>
 <tr><td>154</td><td>DK25</td><td>f14b7a141a</td><td>2019-02-22 20:37:15</td><td>3</td><td>104857600.0</td><td>5242880.0</td></tr>
 <tr><td>148</td><td>DK5</td><td>58d5956491</td><td>2019-02-22 20:42:15</td><td>3</td><td>104857600.0</td><td>5242880.0</td></tr>
-<tr><td>145</td><td>The Bald Golem 2</td><td>27fb55e95b</td><td>2019-09-13 16:17:02</td><td>3</td><td>377411432.0</td><td>5734848.0</td></tr>
-<tr><td>145</td><td>xeqres</td><td>c01a28b851</td><td>2019-09-13 16:17:02</td><td>3</td><td>1048576.0</td><td>5242880.0</td></tr>
+<tr><td>145</td><td>The Bald Golem 2</td><td>27fb55e95b</td><td>2019-09-13 16:22:02</td><td>3</td><td>377411432.0</td><td>5734848.0</td></tr>
+<tr><td>145</td><td>xeqres</td><td>c01a28b851</td><td>2019-09-14 16:17:02</td><td>3</td><td>1048576.0</td><td>5242880.0</td></tr>
 <tr><td>143</td><td>DK6</td><td>e6ab95ae5a</td><td>2019-04-03 20:58:53</td><td>3</td><td>104857600.0</td><td>5242880.0</td></tr>
-<tr><td>141</td><td>golemnode587394</td><td>036671814f</td><td>2019-09-13 16:17:02</td><td>3</td><td>1048576.0</td><td>5737500.0</td></tr>
+<tr><td>141</td><td>golemnode587394</td><td>036671814f</td><td>2019-09-14 16:17:02</td><td>3</td><td>1048576.0</td><td>5737500.0</td></tr>
 <tr><td>140</td><td>Free-Range Comp.</td><td>071f76c528</td><td>2019-04-09 23:13:53</td><td>3</td><td>668744376.0</td><td>5767168.0</td></tr>
-<tr><td>138</td><td>(Anonymous)</td><td>d843dfd5a8</td><td>2019-09-13 16:17:02</td><td>7</td><td>119353816.0</td><td>11058252.0</td></tr>
-<tr><td>137</td><td>chriss</td><td>38a0a1d284</td><td>2019-09-13 16:17:02</td><td>1</td><td>138566741.0</td><td>2120718.0</td></tr>
+<tr><td>138</td><td>(Anonymous)</td><td>d843dfd5a8</td><td>2019-09-14 16:17:02</td><td>7</td><td>119353816.0</td><td>11058252.0</td></tr>
+<tr><td>137</td><td>chriss</td><td>38a0a1d284</td><td>2019-09-14 16:17:02</td><td>1</td><td>138566741.0</td><td>2120718.0</td></tr>
 <tr><td>133</td><td>Zoey</td><td>a517033a35</td><td>2019-02-08 05:02:15</td><td>2</td><td>354418688.0</td><td>8178578.0</td></tr>
 <tr><td>131</td><td>DK11</td><td>e0f6876a75</td><td>2019-02-21 20:57:15</td><td>3</td><td>104857600.0</td><td>5242880.0</td></tr>
 <tr><td>126</td><td>DK20</td><td>31a2601e02</td><td>2019-02-22 21:42:15</td><td>3</td><td>104857600.0</td><td>5242880.0</td></tr>
-<tr><td>126</td><td>macgyver</td><td>4e92f89baa</td><td>2019-09-13 16:17:02</td><td>9</td><td>26214400.0</td><td>9437184.0</td></tr>
+<tr><td>126</td><td>macgyver</td><td>4e92f89baa</td><td>2019-09-14 16:17:02</td><td>9</td><td>26214400.0</td><td>9437184.0</td></tr>
 <tr><td>124</td><td>Xurce</td><td>88b7696013</td><td>2019-09-09 00:17:02</td><td>8</td><td>19922944.0</td><td>10485760.0</td></tr>
-<tr><td>123</td><td>Kmanstocker</td><td>fc3e5b1b60</td><td>2019-09-13 16:17:02</td><td>5</td><td>548579138.0</td><td>6973536.0</td></tr>
+<tr><td>123</td><td>Kmanstocker</td><td>fc3e5b1b60</td><td>2019-09-14 16:17:02</td><td>5</td><td>548579138.0</td><td>6973536.0</td></tr>
 <tr><td>122</td><td>vehsak</td><td>e79bc084c9</td><td>2019-03-28 13:18:53</td><td>1</td><td>31457280.0</td><td>4194304.0</td></tr>
 <tr><td>122</td><td>vrbros</td><td>f18d2d83f7</td><td>2019-07-15 13:27:02</td><td>3</td><td>12411632.0</td><td>12491186.0</td></tr>
-<tr><td>120</td><td>kenadian</td><td>9e36e4be75</td><td>2019-09-13 16:17:02</td><td>3</td><td>260863744.0</td><td>25165824.0</td></tr>
-<tr><td>114</td><td>MexiTico</td><td>ba697979a5</td><td>2019-09-13 16:17:02</td><td>5</td><td>13531448.0</td><td>4688408.0</td></tr>
-<tr><td>113</td><td>whodunnit</td><td>fbd13c89e0</td><td>2019-09-13 15:57:02</td><td>5</td><td>262144000.0</td><td>8388608.0</td></tr>
-<tr><td>113</td><td>The_Bras_Node</td><td>873bd46534</td><td>2019-09-13 16:17:02</td><td>4</td><td>9895316.0</td><td>11668068.0</td></tr>
+<tr><td>121</td><td>kenadian</td><td>9e36e4be75</td><td>2019-09-14 16:17:02</td><td>3</td><td>260863744.0</td><td>25165824.0</td></tr>
+<tr><td>116</td><td>MexiTico</td><td>ba697979a5</td><td>2019-09-14 16:17:02</td><td>5</td><td>13531448.0</td><td>4688408.0</td></tr>
+<tr><td>114</td><td>whodunnit</td><td>fbd13c89e0</td><td>2019-09-14 16:17:02</td><td>5</td><td>262144000.0</td><td>8388608.0</td></tr>
+<tr><td>113</td><td>The_Bras_Node</td><td>873bd46534</td><td>2019-09-13 19:47:02</td><td>4</td><td>9895316.0</td><td>11668068.0</td></tr>
 <tr><td>111</td><td>bigarmsbiggut12</td><td>f080031296</td><td>2019-09-10 16:37:02</td><td>2</td><td>29054888.0</td><td>4955690.0</td></tr>
+<tr><td>111</td><td>Skynet41</td><td>c94f4c6be6</td><td>2019-09-14 16:17:02</td><td>3</td><td>10485760.0</td><td>6231756.0</td></tr>
 <tr><td>110</td><td>DK18</td><td>b37d4a4ad2</td><td>2019-03-13 18:28:53</td><td>3</td><td>34630624.0</td><td>8912896.0</td></tr>
-<tr><td>110</td><td>Skynet41</td><td>c94f4c6be6</td><td>2019-09-11 15:02:02</td><td>3</td><td>10485760.0</td><td>6231756.0</td></tr>
 <tr><td>109</td><td>snakelips</td><td>e0d04800ab</td><td>2019-01-23 18:32:15</td><td>7</td><td>1048576.0</td><td>2894748.0</td></tr>
-<tr><td>107</td><td>Austinav2</td><td>11a1cd3a2a</td><td>2019-08-09 00:52:02</td><td>6</td><td>115561816.0</td><td>10485760.0</td></tr>
+<tr><td>107</td><td>DaSSiMac</td><td>b8eaf9b957</td><td>2019-09-14 16:17:02</td><td>2</td><td>217935040.0</td><td>8388608.0</td></tr>
 
     </tbody>
   </table>
@@ -357,9 +357,9 @@ $(document).ready(function() {
     </thead>
     <tbody>
       <tr><td scope='row'>1372</td><td>ImALumberJack</td><td>839b655694</td><td>2019-09-09 09:37:02</td><td>1</td><td>1048576.0</td><td>24709830.0</td></tr>
-<tr><td>1178</td><td>TastyDoe</td><td>1f8e0cdf90</td><td>2019-09-13 16:17:02</td><td>1</td><td>1048576.0</td><td>6130374.0</td></tr>
-<tr><td>1006</td><td>CaptainArmadillo</td><td>ead88c641f</td><td>2019-09-13 16:17:02</td><td>1</td><td>1048576.0</td><td>6130386.0</td></tr>
-<tr><td>986</td><td>fzhut</td><td>efc9be5e59</td><td>2019-09-13 16:17:02</td><td>1</td><td>1048576.0</td><td>6130386.0</td></tr>
+<tr><td>1178</td><td>TastyDoe</td><td>1f8e0cdf90</td><td>2019-09-14 16:17:02</td><td>1</td><td>1048576.0</td><td>6130374.0</td></tr>
+<tr><td>1006</td><td>CaptainArmadillo</td><td>ead88c641f</td><td>2019-09-14 16:17:02</td><td>1</td><td>1048576.0</td><td>6130386.0</td></tr>
+<tr><td>986</td><td>fzhut</td><td>efc9be5e59</td><td>2019-09-14 16:17:02</td><td>1</td><td>1048576.0</td><td>6130386.0</td></tr>
 <tr><td>175</td><td>kascheri12</td><td>656778299a</td><td>2019-03-03 08:38:53</td><td>7</td><td>83886080.0</td><td>6291456.0</td></tr>
 <tr><td>27</td><td>macsourcezmija</td><td>e593c8c41e</td><td>2019-07-31 03:12:02</td><td>2</td><td>1048576.0</td><td>1048576.0</td></tr>
 <tr><td>16</td><td>linzmija</td><td>b3c80ffe72</td><td>2019-09-13 07:17:02</td><td>1</td><td>1048576.0</td><td>1526666.0</td></tr>
@@ -376,15 +376,15 @@ $(document).ready(function() {
       <tr><th scope='col'>rs_finished_task_cnt</th><th scope='col'>node_name</th><th scope='col'>short_node_id</th><th scope='col'>snapshot_date</th><th scope='col'>cpu_cores</th><th scope='col'>allowed_resource_size</th><th scope='col'>allowed_resource_memory</th></tr>
     </thead>
     <tbody>
-      <tr><td scope='row'>826</td><td>fzhut</td><td>efc9be5e59</td><td>2019-09-13 16:17:02</td><td>1</td><td>1048576.0</td><td>6130386.0</td></tr>
+      <tr><td scope='row'>826</td><td>fzhut</td><td>efc9be5e59</td><td>2019-09-14 16:17:02</td><td>1</td><td>1048576.0</td><td>6130386.0</td></tr>
 <tr><td>691</td><td>ImALumberJack</td><td>839b655694</td><td>2019-09-09 09:37:02</td><td>1</td><td>1048576.0</td><td>24709830.0</td></tr>
-<tr><td>629</td><td>TastyDoe</td><td>1f8e0cdf90</td><td>2019-09-13 16:17:02</td><td>1</td><td>1048576.0</td><td>6130374.0</td></tr>
-<tr><td>581</td><td>CaptainArmadillo</td><td>ead88c641f</td><td>2019-09-13 16:17:02</td><td>1</td><td>1048576.0</td><td>6130386.0</td></tr>
+<tr><td>629</td><td>TastyDoe</td><td>1f8e0cdf90</td><td>2019-09-14 16:17:02</td><td>1</td><td>1048576.0</td><td>6130374.0</td></tr>
+<tr><td>581</td><td>CaptainArmadillo</td><td>ead88c641f</td><td>2019-09-14 16:17:02</td><td>1</td><td>1048576.0</td><td>6130386.0</td></tr>
 <tr><td>174</td><td>kascheri12</td><td>656778299a</td><td>2019-03-03 08:38:53</td><td>7</td><td>83886080.0</td><td>6291456.0</td></tr>
 <tr><td>22</td><td>macsourcezmija</td><td>e593c8c41e</td><td>2019-07-31 03:12:02</td><td>2</td><td>1048576.0</td><td>1048576.0</td></tr>
 <tr><td>14</td><td>linzmija</td><td>b3c80ffe72</td><td>2019-09-13 07:17:02</td><td>1</td><td>1048576.0</td><td>1526666.0</td></tr>
 <tr><td>13</td><td>vm linux 19.2</td><td>bc2e959fc9</td><td>2019-07-11 07:02:02</td><td>3</td><td>46465400.0</td><td>12301476.0</td></tr>
-<tr><td>11</td><td>10xGolemginneer</td><td>a3020d305e</td><td>2019-09-13 16:17:02</td><td>1</td><td>31457280.0</td><td>5242880.0</td></tr>
+<tr><td>11</td><td>10xGolemginneer</td><td>a3020d305e</td><td>2019-09-13 16:42:02</td><td>1</td><td>31457280.0</td><td>5242880.0</td></tr>
 
     </tbody>
   </table>
@@ -397,15 +397,15 @@ $(document).ready(function() {
       <tr><th scope='col'>rs_finished_ok_cnt</th><th scope='col'>node_name</th><th scope='col'>short_node_id</th><th scope='col'>snapshot_date</th><th scope='col'>cpu_cores</th><th scope='col'>allowed_resource_size</th><th scope='col'>allowed_resource_memory</th></tr>
     </thead>
     <tbody>
-      <tr><td scope='row'>130</td><td>fzhut</td><td>efc9be5e59</td><td>2019-09-13 16:17:02</td><td>1</td><td>1048576.0</td><td>6130386.0</td></tr>
+      <tr><td scope='row'>130</td><td>fzhut</td><td>efc9be5e59</td><td>2019-09-14 16:17:02</td><td>1</td><td>1048576.0</td><td>6130386.0</td></tr>
 <tr><td>61</td><td>ImALumberJack</td><td>839b655694</td><td>2019-09-09 09:37:02</td><td>1</td><td>1048576.0</td><td>24709830.0</td></tr>
-<tr><td>56</td><td>CaptainArmadillo</td><td>ead88c641f</td><td>2019-09-13 16:17:02</td><td>1</td><td>1048576.0</td><td>6130386.0</td></tr>
-<tr><td>50</td><td>TastyDoe</td><td>1f8e0cdf90</td><td>2019-09-13 16:17:02</td><td>1</td><td>1048576.0</td><td>6130374.0</td></tr>
+<tr><td>56</td><td>CaptainArmadillo</td><td>ead88c641f</td><td>2019-09-14 16:17:02</td><td>1</td><td>1048576.0</td><td>6130386.0</td></tr>
+<tr><td>50</td><td>TastyDoe</td><td>1f8e0cdf90</td><td>2019-09-14 16:17:02</td><td>1</td><td>1048576.0</td><td>6130374.0</td></tr>
 <tr><td>22</td><td>macsourcezmija</td><td>e593c8c41e</td><td>2019-07-31 03:12:02</td><td>2</td><td>1048576.0</td><td>1048576.0</td></tr>
 <tr><td>17</td><td>kascheri12</td><td>656778299a</td><td>2019-03-03 08:38:53</td><td>7</td><td>83886080.0</td><td>6291456.0</td></tr>
 <tr><td>13</td><td>linzmija</td><td>b3c80ffe72</td><td>2019-09-13 07:17:02</td><td>1</td><td>1048576.0</td><td>1526666.0</td></tr>
 <tr><td>12</td><td>vm linux 19.2</td><td>bc2e959fc9</td><td>2019-07-11 07:02:02</td><td>3</td><td>46465400.0</td><td>12301476.0</td></tr>
-<tr><td>11</td><td>10xGolemginneer</td><td>a3020d305e</td><td>2019-09-13 16:17:02</td><td>1</td><td>31457280.0</td><td>5242880.0</td></tr>
+<tr><td>11</td><td>10xGolemginneer</td><td>a3020d305e</td><td>2019-09-13 16:42:02</td><td>1</td><td>31457280.0</td><td>5242880.0</td></tr>
 <tr><td>10</td><td>vvv</td><td>c0fee64a7c</td><td>2019-07-11 08:07:02</td><td>3</td><td>30033448.0</td><td>12582036.0</td></tr>
 <tr><td>8</td><td>tempest</td><td>5ad86f3605</td><td>2019-09-09 03:52:02</td><td>11</td><td>81827044.0</td><td>49248336.0</td></tr>
 
@@ -436,8 +436,8 @@ $(document).ready(function() {
 <tr><td>63</td><td></td><td>1db2989afe</td><td>2018-12-19 10:12:28</td><td>63</td><td>1048576.0</td><td>198089241.0</td></tr>
 <tr><td>63</td><td>server</td><td>227bb3c4af</td><td>2018-12-19 16:17:28</td><td>63</td><td>1048576.0</td><td>98989092.0</td></tr>
 <tr><td>63</td><td></td><td>d21faacd1c</td><td>2018-12-24 22:12:28</td><td>63</td><td>1048576.0</td><td>198089241.0</td></tr>
-<tr><td>63</td><td></td><td>34bf695cea</td><td>2018-12-25 16:07:28</td><td>63</td><td>1048576.0</td><td>198089241.0</td></tr>
 <tr><td>63</td><td></td><td>5ad7765acc</td><td>2018-12-25 16:07:28</td><td>63</td><td>1048576.0</td><td>198089241.0</td></tr>
+<tr><td>63</td><td></td><td>34bf695cea</td><td>2018-12-25 16:07:28</td><td>63</td><td>1048576.0</td><td>198089241.0</td></tr>
 <tr><td>63</td><td></td><td>f5f643d260</td><td>2018-12-25 16:07:28</td><td>63</td><td>1048576.0</td><td>198089238.0</td></tr>
 <tr><td>63</td><td></td><td>1af8bd40c3</td><td>2018-12-25 16:12:28</td><td>63</td><td>1048576.0</td><td>198089241.0</td></tr>
 <tr><td>63</td><td></td><td>57ce921b99</td><td>2018-12-25 16:12:28</td><td>63</td><td>1048576.0</td><td>198089241.0</td></tr>
@@ -453,13 +453,13 @@ $(document).ready(function() {
 <tr><td>63</td><td>ionsever</td><td>b195c247f2</td><td>2019-02-15 06:42:15</td><td>46</td><td>342884352.0</td><td>78643200.0</td></tr>
 <tr><td>63</td><td>ionserver</td><td>b120bec9ae</td><td>2019-02-17 11:32:15</td><td>63</td><td>1048576.0</td><td>98989092.0</td></tr>
 <tr><td>63</td><td>ionserver1</td><td>caee242ea8</td><td>2019-04-16 04:03:53</td><td>61</td><td>783286272.0</td><td>85773516.0</td></tr>
+<tr><td>63</td><td>icegolem5</td><td>49c8de8086</td><td>2019-09-03 12:07:02</td><td>63</td><td>26750868.0</td><td>24123278.0</td></tr>
 <tr><td>63</td><td>icegolem3</td><td>e725b1e229</td><td>2019-09-03 12:07:02</td><td>63</td><td>26750880.0</td><td>24123278.0</td></tr>
 <tr><td>63</td><td>icegolem2</td><td>d90d730df1</td><td>2019-09-03 12:07:02</td><td>63</td><td>21824172.0</td><td>24123278.0</td></tr>
-<tr><td>63</td><td>icegolem5</td><td>49c8de8086</td><td>2019-09-03 12:07:02</td><td>63</td><td>26750868.0</td><td>24123278.0</td></tr>
-<tr><td>63</td><td>ioassembly-62core-1</td><td>21d1cda599</td><td>2019-09-13 16:17:02</td><td>62</td><td>1048576.0</td><td>24702888.0</td></tr>
-<tr><td>63</td><td>ioassembly-62core-2</td><td>f1bea36319</td><td>2019-09-13 16:17:02</td><td>62</td><td>1048576.0</td><td>24702936.0</td></tr>
-<tr><td>63</td><td>icegolem1</td><td>eaf84d23d7</td><td>2019-09-13 16:17:02</td><td>63</td><td>23681284.0</td><td>24123278.0</td></tr>
-<tr><td>63</td><td>icegolem4</td><td>a77b7f4b2b</td><td>2019-09-13 16:17:02</td><td>63</td><td>26750880.0</td><td>24123278.0</td></tr>
+<tr><td>63</td><td>ioassembly-62core-1</td><td>21d1cda599</td><td>2019-09-13 19:02:02</td><td>62</td><td>1048576.0</td><td>24702888.0</td></tr>
+<tr><td>63</td><td>ioassembly-62core-2</td><td>f1bea36319</td><td>2019-09-13 19:02:02</td><td>62</td><td>1048576.0</td><td>24702936.0</td></tr>
+<tr><td>63</td><td>icegolem1</td><td>eaf84d23d7</td><td>2019-09-14 16:17:02</td><td>63</td><td>23681284.0</td><td>24123278.0</td></tr>
+<tr><td>63</td><td>icegolem4</td><td>a77b7f4b2b</td><td>2019-09-14 16:17:02</td><td>63</td><td>26750880.0</td><td>24123278.0</td></tr>
 <tr><td>39</td><td>Terminator 420</td><td>165a7ae218</td><td>2019-01-21 19:47:15</td><td>4</td><td>165675008.0</td><td>10485760.0</td></tr>
 <tr><td>39</td><td>cryptohnode1</td><td>efb810bac8</td><td>2019-04-06 11:03:53</td><td>39</td><td>266446912.0</td><td>2986422.0</td></tr>
 <tr><td>35</td><td>jm667</td><td>07f6cc3da0</td><td>2019-04-13 16:18:53</td><td>35</td><td>421427812.0</td><td>12079068.0</td></tr>
